@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — Vanishka Enterprises | Computers, Laptops & Networking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:     { DEFAULT: '#0F172A', 50: '#F8FAFC', 100: '#F1F5F9', 800: '#1E293B', 900: '#0F172A', 950: '#020617' },
+          electric: { DEFAULT: '#2563EB', light: '#3B82F6', dark: '#1D4ED8' },
+          cyan:     { DEFAULT: '#06B6D4', light: '#22D3EE', dark: '#0891B2' },
+          sale:     '#E41E3F',
+          fb:       { DEFAULT: '#0F4C81', dark: '#0B3A63', darker: '#072642', tint: '#F0F7FF' },
+          ink:      '#1C2B33',
+          wa:       { DEFAULT: '#25D366', dark: '#1EBE5A', light: '#DCF8C6' }
+        },
+        fontFamily: {
+          display: ['Poppins', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #0F172A; background-color: #F8FAFC; }
+  h1,h2,h3,.brand-font { font-family: 'Poppins', sans-serif; }
+  ::selection { background: #2563EB; color: #fff; }
+  .glass-header {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between">
+
+  <!-- ==========================================
+       STICKY GLASSMORPHISM NAVBAR (Exact Specs)
+       ========================================== -->
+  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex items-center justify-between gap-4 lg:gap-6">
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-md shadow-slate-900/30 group-hover:scale-105 transition-transform duration-200">
+            <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain filter drop-shadow" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <span class="font-display font-extrabold text-lg sm:text-xl text-electric tracking-tight leading-none transition-colors">VANISHKA ENTERPRISES</span>
+            <div class="flex items-center justify-between text-[7.5px] sm:text-[8.5px] font-bold text-amber-600 uppercase tracking-wider w-full mt-0.5">
+              <span>COMPUTERS</span>
+              <span class="text-amber-500/70">•</span>
+              <span>LAPTOPS</span>
+              <span class="text-amber-500/70">•</span>
+              <span>HARDWARE</span>
+              <span class="text-amber-500/70">•</span>
+              <span>NETWORKING</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Home</a>
+          <a href="about-us.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">About Us</a>
+          <a href="our-products.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Products</a>
+          <a href="contact.html" class="px-3.5 py-2 rounded-lg bg-electric/10 text-electric font-extrabold transition">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions (Subtle Search Bar with Ctrl+K, Cart) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          
+          <!-- Subtle Search Bar with Ctrl+K Badge -->
+          <div class="hidden md:flex items-center bg-slate-100/90 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-500 focus-within:bg-white focus-within:border-electric focus-within:ring-2 focus-within:ring-electric/20 transition-all w-48 xl:w-56 cursor-pointer" onclick="window.location.href='our-products.html';">
+            <svg class="w-4 h-4 text-slate-400 shrink-0 mr-2" viewBox="0 0 24 24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="text" placeholder="Search IT hardware..." class="bg-transparent w-full text-slate-800 placeholder-slate-400 outline-none text-xs" />
+            <kbd class="hidden xl:inline-block bg-white border border-slate-300 rounded px-1.5 py-0.5 text-[10px] font-semibold text-slate-400 shadow-2xs shrink-0">Ctrl+K</kbd>
+          </div>
+
+          <!-- Cart Icon with Item Count Badge -->
+          <a href="our-products.html" aria-label="Cart" class="relative p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-electric transition group">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+            <span class="absolute top-1 right-1 bg-electric text-white text-[10px] font-black min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center border-2 border-white shadow-xs">0</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-slate-800 shadow-xl">
+      <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Home</a>
+      <a href="about-us.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">About Us</a>
+      <a href="our-products.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Products &amp; Laptops</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md bg-electric/10 text-electric font-bold">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="bg-gradient-to-b from-fb-tint via-blue-50/70 to-white text-ink py-10 sm:py-14 border-b border-fb/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-fb/10 text-fb font-bold text-xs uppercase tracking-wider mb-3">
+        <span>💬 Instant WhatsApp Ordering & Support</span>
+      </span>
+      <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-fb max-w-3xl mx-auto leading-tight">
+        Get In Touch With Vanishka Enterprises
+      </h1>
+      <p class="mt-3 text-ink/75 font-medium text-sm sm:text-base max-w-2xl mx-auto">
+        Have questions about laptops, printers, hardware or digital boards? Want to place a custom order or inquire about wholesale GST pricing? Connect directly with us on WhatsApp or call our team anytime!
+      </p>
+
+      <!-- PROMINENT WHATSAPP QUICK ACTION CARD -->
+      <div class="mt-8 max-w-2xl mx-auto bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-400/30 flex flex-col sm:flex-row items-center justify-between gap-6 hover:shadow-2xl transition duration-300">
+        <div class="text-center sm:text-left">
+          <span class="inline-block text-xs uppercase font-extrabold tracking-widest text-emerald-200 bg-emerald-950/40 px-3 py-1 rounded-full mb-2">Fastest Response</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl">Order Directly via WhatsApp</h2>
+          <p class="text-emerald-100 text-xs sm:text-sm mt-1">Select any product, chat with our representative &amp; confirm your order instantly.</p>
+        </div>
+        <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20place%20an%20order%20or%20inquire%20about%20your%20products." 
+           target="_blank" 
+           class="shrink-0 px-6 py-3.5 rounded-2xl bg-white text-emerald-700 font-black text-sm hover:bg-emerald-50 transition shadow-lg flex items-center gap-2 hover:scale-105 active:scale-95">
+          <svg class="w-5 h-5 fill-current text-emerald-600" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+          Start WhatsApp Chat →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT INFORMATION CARDS & INQUIRY FORM ============ -->
+  <main class="max-w-7xl mx-auto px-4 py-12 flex-1 w-full">
+    <div class="grid lg:grid-cols-12 gap-10">
+
+      <!-- LEFT SIDE: CONTACT DETAILS & INFO CARDS -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <h2 class="font-display font-extrabold text-2xl text-fb">Contact Details</h2>
+          <p class="text-ink/70 text-sm mt-1">Reach out to us through any of the channels below. We are ready to assist you with sales, bulk quotes, technical support &amp; warranty queries.</p>
+        </div>
+
+        <!-- Card 1: Phone Support -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-fb/10 text-fb flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-base text-ink">Call Support Lines</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Available 24/7 for urgent orders &amp; inquiries</p>
+            <div class="mt-2 space-y-0.5">
+              <a href="tel:+918600572488" class="block font-extrabold text-fb hover:underline text-sm">+91 86005 72488</a>
+              <a href="tel:+919822057248" class="block font-extrabold text-fb hover:underline text-sm">+91 98220 57248</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: WhatsApp Chat -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-base text-ink">WhatsApp Quick Ordering</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Send product screenshots or ask price quotes directly</p>
+            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." 
+               target="_blank" 
+               class="inline-block mt-2 font-extrabold text-emerald-600 hover:underline text-sm">
+              Chat on WhatsApp: +91 86005 72488 →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Email Support -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-base text-ink">Email Inquiry</h3>
+            <p class="text-xs text-slate-500 mt-0.5">For corporate purchase tenders &amp; official invoices</p>
+            <a href="mailto:vanishkaenterprises@gmail.com" class="inline-block mt-2 font-bold text-fb hover:underline text-sm">
+              vanishkaenterprises@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Store & Working Hours -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-base text-ink">Showroom &amp; Support Hours</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Monday to Saturday: 10:00 AM – 8:30 PM</p>
+            <p class="text-xs text-emerald-600 font-bold mt-1">✓ WhatsApp Chat open 24/7</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: INTERACTIVE INQUIRY FORM THAT SENDS TO WHATSAPP -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-lg p-6 sm:p-8">
+          <div class="mb-6 border-b border-slate-100 pb-4">
+            <span class="text-xs font-bold text-fb bg-fb/10 px-3 py-1 rounded-full uppercase tracking-wider">Fast Track Form</span>
+            <h2 class="font-display font-extrabold text-2xl text-ink mt-2">Send Order Inquiry</h2>
+            <p class="text-xs text-slate-500 mt-1">Fill out your requirement below to generate an instant WhatsApp inquiry message.</p>
+          </div>
+
+          <form id="contactInquiryForm" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contactName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Your Name *</label>
+                <input type="text" id="contactName" required placeholder="e.g. Rahul Sharma"
+                  class="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 outline-none focus:border-fb focus:ring-2 focus:ring-fb/20 bg-slate-50/50" />
+              </div>
+              <div>
+                <label for="contactPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">WhatsApp / Phone Number *</label>
+                <input type="tel" id="contactPhone" required placeholder="e.g. 9876543210"
+                  class="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 outline-none focus:border-fb focus:ring-2 focus:ring-fb/20 bg-slate-50/50" />
+              </div>
+            </div>
+
+            <div>
+              <label for="contactCategory" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Product Category Interested In *</label>
+              <select id="contactCategory" required
+                class="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 outline-none focus:border-fb focus:ring-2 focus:ring-fb/20 bg-slate-50/50 text-slate-700 font-medium">
+                <option value="Certified Refurbished Laptops (Dell, HP, Lenovo)">Certified Refurbished Laptops (Dell, HP, Lenovo)</option>
+                <option value="Canon Printers & Ink Tanks">Canon Printers &amp; Ink Tanks</option>
+                <option value="Interactive Smart Digital Boards (BenQ, LG, Cybernetyx)">Interactive Smart Digital Boards (BenQ, LG, Cybernetyx)</option>
+                <option value="Computer Hardware & Components">Computer Hardware &amp; Components</option>
+                <option value="Networking & Security Equipment (Hikvision)">Networking &amp; Security Equipment (Hikvision)</option>
+                <option value="Bulk Corporate / School Purchase">Bulk Corporate / School Purchase</option>
+                <option value="Other Product Inquiry">Other Product Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="contactMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Message / Product Specification *</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Specify model, quantity, or any specific question you have..."
+                class="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 outline-none focus:border-fb focus:ring-2 focus:ring-fb/20 bg-slate-50/50"></textarea>
+            </div>
+
+            <button type="submit" 
+              class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-base shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-95">
+              <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+              Send Inquiry On WhatsApp →
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ FREQUENTLY ASKED QUESTIONS (FAQ) ============ -->
+    <section class="mt-16 bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-sm">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-bold text-fb bg-fb/10 px-3 py-1 rounded-full uppercase tracking-wider">Help &amp; Answers</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mt-2">Frequently Asked Questions</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Here is how buying directly via WhatsApp works at Vanishka Enterprises.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+          <h3 class="font-display font-bold text-base text-fb">1. How do I place an order on WhatsApp?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Simply click any "Connect on WhatsApp" button or submit the form above. Our team will verify product stock, send real photos/videos if needed, and confirm your order details instantly.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+          <h3 class="font-display font-bold text-base text-fb">2. Do you provide GST Invoices for Business?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Yes! All products sold at Vanishka Enterprises come with official GST invoices so business buyers can claim input tax credit.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+          <h3 class="font-display font-bold text-base text-fb">3. What warranty comes with Refurbished Laptops?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">All our 50-Point Audited Refurbished Dell, HP &amp; Lenovo laptops come with 1-Year Comprehensive Warranty and complete technical support.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+          <h3 class="font-display font-bold text-base text-fb">4. Do you deliver across India?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Yes, we provide safe insured courier shipping all over India. Free shipping is available on orders above ₹4,999.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER (Synchronized Across All Pages)
+       ========================================== -->
+  <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4 group">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-sm">
+              <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain" />
+            </div>
+            <span class="font-display font-black text-lg text-electric tracking-tight">VANISHKA ENTERPRISES</span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed font-normal">
+            Authorized enterprise partner providing certified refurbished laptops, Canon printers, AI smart boards, Microtek UPS, and IT hardware.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-cyan-400 transition">About Us</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CUSTOMER SERVICE</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Track Order</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Shipping &amp; Delivery</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">1-Year Warranty</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Returns &amp; Refunds</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CONTACT US</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"/></svg>
+              <span>Tech Hub Street, Pune / MH 411001</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+              <span class="font-bold text-white">(+91) 86005 72488</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <p>© 2026 <span class="text-slate-300 font-bold">Vanishka Enterprises</span>. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="contact.html" class="hover:text-slate-300 transition">Privacy Policy</a>
+          <span>|</span>
+          <a href="contact.html" class="hover:text-slate-300 transition">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" aria-label="Chat on WhatsApp" class="fixed right-5 bottom-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+  </a>
+
+  <script>
+    // Handle Inquiry Form Submission -> Construct WhatsApp message URL
+    document.getElementById('contactInquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('contactName').value.trim();
+      var phone = document.getElementById('contactPhone').value.trim();
+      var category = document.getElementById('contactCategory').value;
+      var message = document.getElementById('contactMessage').value.trim();
+
+      var text = "Hello Vanishka Enterprises,\n\n" +
+                 "I would like to place an order / inquiry:\n" +
+                 "👤 *Name:* " + name + "\n" +
+                 "📱 *Phone/WhatsApp:* " + phone + "\n" +
+                 "📦 *Category:* " + category + "\n" +
+                 "💬 *Message:* " + message;
+
+      var encodedText = encodeURIComponent(text);
+      var whatsappUrl = "https://wa.me/918600572488?text=" + encodedText;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

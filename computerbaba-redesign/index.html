@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vanishka Enterprises — B2B &amp; Retail IT Hardware | Laptops, Printers &amp; Smart Boards</title>
+<meta name="description" content="Vanishka Enterprises is an authorized enterprise partner providing certified refurbished laptops, Canon printers, AI interactive digital smart boards, UPS systems, and IT hardware." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            DEFAULT: '#0F172A',
+            50: '#F8FAFC',
+            100: '#F1F5F9',
+            800: '#1E293B',
+            900: '#0F172A',
+            950: '#020617',
+          },
+          electric: {
+            DEFAULT: '#2563EB',
+            light: '#3B82F6',
+            dark: '#1D4ED8',
+          },
+          cyan: {
+            DEFAULT: '#06B6D4',
+            light: '#22D3EE',
+            dark: '#0891B2',
+          },
+          sale: '#E41E3F',
+        },
+        fontFamily: {
+          display: ['Poppins', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #0F172A; background-color: #F8FAFC; }
+  h1, h2, h3, h4, .brand-font { font-family: 'Poppins', sans-serif; }
+  ::selection { background: #2563EB; color: #fff; }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid #2563EB; outline-offset: 2px;
+  }
+
+  /* Glassmorphism utility */
+  .glass-header {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Tech Grid CSS Radial Pattern */
+  .tech-grid-pattern {
+    background-color: #F8FAFC;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.07) 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
+      radial-gradient(#CBD5E1 0.75px, transparent 0.75px);
+    background-size: 100% 100%, 100% 100%, 24px 24px;
+    background-position: 0 0, 0 0, 0 0;
+  }
+
+  /* ===================================================
+     HERO SECTION PREMIUM ANIMATIONS (60FPS GPU ACCELERATED)
+     =================================================== */
+
+  /* 1. Subtle Animated Gradient/Blob Background */
+  @keyframes heroBlobFloat1 {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+    33% { transform: translate3d(45px, -35px, 0) scale(1.15) rotate(120deg); }
+    66% { transform: translate3d(-25px, 25px, 0) scale(0.92) rotate(240deg); }
+  }
+  @keyframes heroBlobFloat2 {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+    33% { transform: translate3d(-40px, 35px, 0) scale(1.18) rotate(-120deg); }
+    66% { transform: translate3d(30px, -20px, 0) scale(0.95) rotate(-240deg); }
+  }
+  .hero-blob-1 {
+    animation: heroBlobFloat1 18s ease-in-out infinite;
+    will-change: transform;
+  }
+  .hero-blob-2 {
+    animation: heroBlobFloat2 22s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* 2. Staggered Entrance Animations (Headline, Subtext, CTAs) */
+  @keyframes heroStaggerFadeUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .hero-slide.active-slide {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 10;
+  }
+  .hero-slide-text {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-slide.active-slide .hero-stagger-1 {
+    animation: heroStaggerFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  }
+  .hero-slide.active-slide .hero-stagger-2 {
+    animation: heroStaggerFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+  }
+  .hero-slide.active-slide .hero-stagger-3 {
+    animation: heroStaggerFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+  }
+  .hero-slide.active-slide .hero-stagger-4 {
+    animation: heroStaggerFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both;
+  }
+  .hero-slide.active-slide .hero-stagger-5 {
+    animation: heroStaggerFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.64s both;
+  }
+
+  .hero-slide-visual {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hero-slide.active-slide .hero-slide-visual {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.15s;
+  }
+
+  /* ===================================================
+     UNIFIED HERO PRODUCT CONTAINER & SILHOUETTE DROP SHADOW
+     =================================================== */
+
+  /* 3 & 4. Consistent Fixed Size & Aspect Ratio Container with Generous Whitespace Padding */
+  .hero-product-image-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  @media (min-width: 640px) {
+    .hero-product-image-container {
+      height: 380px;
+      padding: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-product-image-container {
+      height: 430px;
+      padding: 1.5rem;
+    }
+  }
+
+  /* 1 & 2. Product Image Cutout with Soft Realistic Silhouette Drop Shadow */
+  .hero-product-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: transparent !important;
+    /* Soft, realistic double-layered silhouette drop shadow (matching product silhouette, no solid oval) */
+    filter: drop-shadow(0 25px 35px rgba(15, 23, 42, 0.20)) drop-shadow(0 10px 15px rgba(37, 99, 235, 0.18)) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease !important;
+    /* 5. Subtle Floating Animation (max 8-10px translateY) */
+    animation: subtleFloatY 3.8s ease-in-out infinite !important;
+    will-change: transform, filter;
+  }
+
+  /* 5. Subtle Floating Keyframes (translateY 8-9px max) */
+  @keyframes subtleFloatY {
+    0%, 100% {
+      transform: translate3d(0, 0px, 0);
+    }
+    50% {
+      transform: translate3d(0, -9px, 0);
+    }
+  }
+
+  .hero-product-image-container:hover .hero-product-image {
+    filter: drop-shadow(0 28px 35px rgba(15, 23, 42, 0.22)) drop-shadow(0 12px 18px rgba(37, 99, 235, 0.22)) !important;
+  }
+
+  /* Glassmorphism Info Cards with Gentle Fade-In-Pulse */
+  .spatial-chip {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+    will-change: transform, opacity;
+  }
+
+  @keyframes glassBadgePulse {
+    0%, 100% {
+      opacity: 0.95;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+    }
+    50% {
+      opacity: 1;
+      box-shadow: 0 14px 32px -4px rgba(37, 99, 235, 0.25);
+    }
+  }
+
+  .spatial-chip-1 { animation: glassBadgePulse 4s ease-in-out infinite 0s; transform: translateZ(55px); }
+  .spatial-chip-2 { animation: glassBadgePulse 4s ease-in-out infinite 1s; transform: translateZ(70px); }
+  .spatial-chip-3 { animation: glassBadgePulse 4s ease-in-out infinite 2s; transform: translateZ(45px); }
+  .spatial-chip-4 { animation: glassBadgePulse 4s ease-in-out infinite 3s; transform: translateZ(60px); }
+  
+  .spatial-chip:hover {
+    transform: translateZ(95px) scale(1.06) !important;
+    box-shadow: 0 18px 36px rgba(37, 99, 235, 0.3) !important;
+  }
+
+  /* 5. Primary CTA Button Hover Effect: scale(1.05) + Glowing Box-Shadow */
+  .primary-hero-cta {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: transform, box-shadow;
+  }
+  .primary-hero-cta:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 18px 40px -4px rgba(37, 99, 235, 0.48), 0 0 25px rgba(6, 182, 212, 0.38) !important;
+  }
+
+  /* 3D Spatial Interactive Stage */
+  .spatial-3d-stage {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  .spatial-3d-card {
+    transform-style: preserve-3d;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .spatial-3d-product {
+    transform: translateZ(40px) rotateY(-8deg) rotateX(5deg);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+    filter: drop-shadow(0 22px 35px rgba(37, 99, 235, 0.35));
+  }
+  .spatial-3d-stage:hover .spatial-3d-product {
+    transform: translateZ(70px) rotateY(0deg) rotateX(0deg) scale(1.08);
+    filter: drop-shadow(0 35px 50px rgba(37, 99, 235, 0.45));
+  }
+
+  .spatial-hologram-ring {
+    transform: rotateX(72deg) translateZ(-25px);
+    box-shadow: 0 0 50px rgba(6, 182, 212, 0.45), inset 0 0 25px rgba(37, 99, 235, 0.35);
+  }
+
+  /* 6. Accessibility & Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-blob-1,
+    .hero-blob-2,
+    .hero-floating-img,
+    .spatial-chip,
+    .hero-slide-text,
+    .hero-slide-visual,
+    .hero-stagger-1,
+    .hero-stagger-2,
+    .hero-stagger-3,
+    .hero-stagger-4,
+    .hero-stagger-5,
+    .primary-hero-cta {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+
+  /* Ambient Drop Shadow & Hover Lift Effect */
+  .ambient-card {
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(226, 232, 240, 0.8);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .ambient-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -15px rgba(37, 99, 235, 0.2), 0 0 0 1px rgba(37, 99, 235, 0.3);
+  }
+
+  /* Brand Marquee */
+  @keyframes brandMarquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
+  .brand-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  }
+  .brand-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 1.5rem;
+    animation: brandMarquee 26s linear infinite;
+    will-change: transform;
+  }
+  .brand-marquee-container:hover .brand-marquee-track {
+    animation-play-state: paused !important;
+  }
+  .brand-logo-card {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    padding: 0 1.5rem;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.85rem;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,0.04);
+    transition: all 0.25s ease;
+  }
+  .brand-logo-card:hover {
+    transform: translateY(-2px);
+    border-color: #2563EB;
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.18);
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+
+<!-- ==========================================
+     STICKY GLASSMORPHISM NAVBAR (Exact Specs)
+     ========================================== -->
+<header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex items-center justify-between gap-4 lg:gap-6">
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-md shadow-slate-900/30 group-hover:scale-105 transition-transform duration-200">
+          <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain filter drop-shadow" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="font-display font-extrabold text-lg sm:text-xl text-electric tracking-tight leading-none transition-colors">VANISHKA ENTERPRISES</span>
+          <div class="flex items-center justify-between text-[7.5px] sm:text-[8.5px] font-bold text-amber-600 uppercase tracking-wider w-full mt-0.5">
+            <span>COMPUTERS</span>
+            <span class="text-amber-500/70">•</span>
+            <span>LAPTOPS</span>
+            <span class="text-amber-500/70">•</span>
+            <span>HARDWARE</span>
+            <span class="text-amber-500/70">•</span>
+            <span>NETWORKING</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Center Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-700">
+        <a href="index.html" class="px-3.5 py-2 rounded-lg bg-electric/10 text-electric font-extrabold transition">Home</a>
+        <a href="about-us.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">About Us</a>
+        <a href="our-products.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Products</a>
+        <a href="contact.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Contact</a>
+      </nav>
+
+      <!-- Right Header Actions (Subtle Search Bar with Ctrl+K, Cart) -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        
+        <!-- Subtle Search Bar with Ctrl+K Badge -->
+        <div class="hidden md:flex items-center bg-slate-100/90 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-500 focus-within:bg-white focus-within:border-electric focus-within:ring-2 focus-within:ring-electric/20 transition-all w-48 xl:w-56 cursor-pointer" onclick="document.getElementById('search-input').focus();">
+          <svg class="w-4 h-4 text-slate-400 shrink-0 mr-2" viewBox="0 0 24 24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="search-input" type="text" placeholder="Search IT hardware..." class="bg-transparent w-full text-slate-800 placeholder-slate-400 outline-none text-xs" />
+          <kbd class="hidden xl:inline-block bg-white border border-slate-300 rounded px-1.5 py-0.5 text-[10px] font-semibold text-slate-400 shadow-2xs shrink-0">Ctrl+K</kbd>
+        </div>
+
+        <!-- Cart Icon with Item Count Badge -->
+        <a href="our-products.html" aria-label="Cart" class="relative p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-electric transition group">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+          <span class="absolute top-1 right-1 bg-electric text-white text-[10px] font-black min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center border-2 border-white shadow-xs">0</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-slate-800 shadow-xl">
+    <div class="mb-3">
+      <input type="text" placeholder="Search laptops, printers, boards..." class="w-full bg-slate-100 text-sm text-slate-900 px-4 py-2 rounded-lg outline-none border border-slate-200 focus:border-electric" />
+    </div>
+    <a href="index.html" class="block px-3 py-2 rounded-md bg-electric/10 text-electric font-bold">Home</a>
+    <a href="about-us.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">About Us</a>
+    <a href="our-products.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Products &amp; Laptops</a>
+  </div>
+</header>
+
+<!-- ==========================================
+     HERO SLIDER SECTION (Split 2-Column + Tech Mesh & Animated Blobs)
+     ========================================== -->
+<section class="relative tech-grid-pattern py-5 sm:py-7 overflow-hidden" id="hero-slider-section">
+
+  <!-- Subtle Animated Ambient Gradient Blobs -->
+  <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-electric/25 via-cyan-400/20 to-purple-500/20 blur-3xl hero-blob-1 pointer-events-none -z-10"></div>
+  <div class="absolute -bottom-20 -right-20 w-[30rem] h-[30rem] rounded-full bg-gradient-to-br from-cyan-400/20 via-electric/20 to-indigo-600/20 blur-3xl hero-blob-2 pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 relative">
+
+    <!-- Slides Container -->
+    <div class="relative min-h-[420px] sm:min-h-[470px] flex items-center">
+
+      <!-- SLIDE 1: Certified Refurbished Dell, HP & Lenovo Laptops -->
+      <div class="hero-slide active-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        
+        <!-- Left Column (Specs & Badges) -->
+        <div class="lg:col-span-7 hero-slide-text z-10">
+          
+          <!-- Eye-catching Tech Badge -->
+          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-blue-500/10 border border-electric/30 text-electric text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-electric"></span>
+            </span>
+            <span>⚡ AUTHORIZED ENTERPRISE PARTNER</span>
+          </div>
+
+          <!-- Big Bold Heading with Gradient Highlights -->
+          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
+            POWER &amp; SPEED<br />
+            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">AT HALF THE COST</span>
+          </h1>
+
+          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
+            Certified Refurbished Apple Mac Mini, Dell, HP &amp; Lenovo Workstations with 50-Point Hardware Audit, macOS / Windows 11, and 1-Year Comprehensive Warranty.
+          </p>
+
+          <!-- Clear Feature Bullet Points -->
+          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>Certified 50-Point Hardware Audit &amp; Performance Testing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>1-Year Complete Warranty with On-Site Replacement Support</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>Free Express Delivery Across India &amp; GST Invoice for Businesses</span>
+            </div>
+          </div>
+
+          <!-- Starting Price Tag + Dual CTAs -->
+          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
+            
+            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">STARTING PRICE</span>
+              <span class="font-display font-black text-xl text-navy-900 leading-none mt-0.5">₹15,999/-</span>
+            </div>
+
+            <!-- Primary Gradient Button -->
+            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
+              <span>Browse Lineup</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Secondary Ghost Button with Icon -->
+            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20check%20Mac%20Mini%20and%20laptop%20availability." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+              <span>WhatsApp Stock</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
+        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
+          <div class="hero-product-image-container">
+            
+            <!-- Cutout Product Image with Soft Silhouette Shadow -->
+            <img src="images/macbook_3d_hero_cutout_transparent.png" alt="Certified Refurbished Apple MacBook &amp; Enterprise Laptops" class="hero-product-image" />
+
+            <!-- Floating Glassmorphism Badges (Positioned cleanly to fit comfortably without right edge overflow) -->
+            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
+              <span>⚡</span> <span>Core i5 / i7 &amp; Apple Silicon</span>
+            </div>
+
+            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
+              <span>🛡️</span> <span>1-Year Full Warranty</span>
+            </div>
+
+            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
+              <span>🔋</span> <span>50-Point Audit Passed</span>
+            </div>
+
+            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
+              <span>💻</span> <span>100% Genuine macOS / Win 11</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SLIDE 2: Canon High-Efficiency Ink-Tank Printers -->
+      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        
+        <div class="lg:col-span-7 hero-slide-text z-10">
+          
+          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 text-purple-600 text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
+            <span>🖨️ AUTHORIZED CANON PARTNER</span>
+          </div>
+
+          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
+            SEAMLESS PRINTS<br />
+            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">LIMITLESS POSSIBILITIES</span>
+          </h1>
+
+          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
+            Canon High-Efficiency Ink-tank &amp; Heavy-Duty Laser Printers with Original Manufacturer Warranty and Ultra-Low Cost Per Page.
+          </p>
+
+          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>Ultra-Low Cost Printing (High Yield Bottles up to 7,700 Pages)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>Original Canon Brand Warranty &amp; On-Site Service Setup</span>
+            </div>
+          </div>
+
+          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
+            
+            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">STARTING PRICE</span>
+              <span class="font-display font-black text-xl text-navy-900 leading-none mt-0.5">₹8,999/-</span>
+            </div>
+
+            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
+              <span>Explore Canon Lineup</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20an%20instant%20quote%20for%20Canon%20Printers." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs">
+              Instant Quote →
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
+        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
+          <div class="hero-product-image-container">
+            
+            <!-- Cutout Product Image with Soft Silhouette Shadow -->
+            <img src="images/canon_printers_transparent.png" alt="Canon High-Efficiency Ink-Tank Printer" class="hero-product-image" />
+
+            <!-- Floating Glassmorphism Badges -->
+            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
+              <span>🖨️</span> <span>Ultra-Low Cost / Page</span>
+            </div>
+
+            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
+              <span>💧</span> <span>7,700 Pages Yield</span>
+            </div>
+
+            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
+              <span>⚡</span> <span>Canon Brand Warranty</span>
+            </div>
+
+            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
+              <span>📶</span> <span>Wireless Wi-Fi Print</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SLIDE 3: AI Interactive Smart Boards & BenQ Displays -->
+      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        
+        <div class="lg:col-span-7 hero-slide-text z-10">
+          
+          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 text-purple-600 text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
+            <span>🎨 AI SMART CLASSROOMS &amp; BOARDROOMS</span>
+          </div>
+
+          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
+            FUTURE OF CLASSROOMS<br />
+            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">&amp; DIGITAL BOARDROOMS</span>
+          </h1>
+
+          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
+            BenQ, LG, Cybernetyx &amp; Logic 4K Interactive Displays (65", 75", 86") with Trolleys, Dual OS, and On-site Installation Support.
+          </p>
+
+          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>4K Ultra HD Anti-Glare Touchscreens with Zero-Bonding Pen Precision</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
+              <span>Free On-Site Demo &amp; Wholesale Institutional Pricing</span>
+            </div>
+          </div>
+
+          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
+            
+            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">RATES</span>
+              <span class="font-display font-black text-lg text-navy-900 leading-none mt-0.5">Wholesale Best</span>
+            </div>
+
+            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
+              <span>Explore Smart Boards</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20book%20a%20free%20demo%20for%20Digital%20Boards." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs">
+              Book Free Demo →
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
+        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
+          <div class="hero-product-image-container">
+            
+            <!-- Cutout Product Image with Soft Silhouette Shadow -->
+            <img src="images/digital_board_transparent.png" alt="AI Interactive Digital Smart Board" class="hero-product-image" />
+
+            <!-- Floating Glassmorphism Badges -->
+            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
+              <span>⚡</span> <span>4K Ultra HD Display</span>
+            </div>
+
+            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
+              <span>🖐️</span> <span>40-Point Multi-Touch</span>
+            </div>
+
+            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
+              <span>🖋️</span> <span>Zero-Latency Pen</span>
+            </div>
+
+            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
+              <span>🌐</span> <span>Wireless Casting</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Sleek Slide Navigation Indicators & Controls -->
+    <div class="flex items-center justify-between mt-4 pt-2 border-t border-slate-200/60">
+
+      <!-- Slide Indicators / Dots -->
+      <div class="flex items-center gap-2" id="hero-dots-container">
+        <button class="hero-dot w-8 h-2.5 rounded-full bg-electric transition-all duration-300 cursor-pointer shadow-xs" aria-label="Slide 1" aria-current="true"></button>
+        <button class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-electric/60 transition-all duration-300 cursor-pointer" aria-label="Slide 2"></button>
+        <button class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-electric/60 transition-all duration-300 cursor-pointer" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Arrow Controls -->
+      <div class="flex items-center gap-2">
+        <button id="hero-prev-btn" aria-label="Previous slide" class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-700 hover:bg-electric hover:text-white hover:border-electric transition-all">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="hero-next-btn" aria-label="Next slide" class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-700 hover:bg-electric hover:text-white hover:border-electric transition-all">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     TRUST BANNER BELOW HERO (Exact Specs: Stats + Brand Logo Slider)
+     ========================================== -->
+<section class="bg-navy-900 border-y border-slate-800 text-white py-8">
+  <div class="max-w-7xl mx-auto px-4">
+    
+    <!-- Key Trust Stats Callout Strip -->
+    <div class="flex flex-wrap items-center justify-center md:justify-between gap-6 pb-6 border-b border-slate-800 text-center md:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-electric/20 text-cyan-400 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <span class="font-display font-black text-xl text-white">500+ Corporate Clients</span>
+          <span class="text-xs text-slate-400 block">Enterprises, Schools &amp; Government Sector</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <span class="font-display font-black text-xl text-white">100% Genuine Warranty</span>
+          <span class="text-xs text-slate-400 block">Full Manufacturer &amp; Store Backing</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <span class="font-display font-black text-xl text-white">Free On-site Demo</span>
+          <span class="text-xs text-slate-400 block">Interactive Board &amp; Hardware Trial</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client / Brand Logo Slider (Featuring Dell, HP, Lenovo, Canon, BenQ, Microtek, LG, Cybernetyx) -->
+    <div class="pt-6">
+      <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block text-center mb-4">TRUSTED BY LEADING BRAND PARTNERS</span>
+      
+      <div class="brand-marquee-container">
+        <div class="brand-marquee-track">
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-slate-800">DELL</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-electric">hp</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-red-600">Lenovo</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-red-700">Canon</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-purple-700">BenQ</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-slate-900">MICROTEK</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-rose-700">LG</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-blue-700">CYBERNETYX</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-sky-700">SAMSUNG</span>
+          </div>
+
+          <!-- Duplicate for seamless infinite scrolling marquee loop -->
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-slate-800">DELL</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-electric">hp</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-red-600">Lenovo</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-red-700">Canon</span>
+          </div>
+
+          <div class="brand-logo-card">
+            <span class="font-display font-black text-lg text-purple-700">BenQ</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     EXPLOER BY CATEGORY GRID SECTION
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+  <div class="text-center mb-8">
+    <h2 class="font-display font-black text-2xl sm:text-3xl text-navy-900 tracking-tight">EXPLORE BY CATEGORY</h2>
+    <div class="w-16 h-1 bg-electric mx-auto mt-2 rounded-full"></div>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+    
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/laptop_3d_white.jpg" alt="Ultrabooks &amp; Thin Laptops" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Ultrabooks</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">Lightweight &amp; Thin</p>
+    </a>
+
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/monitors.png" alt="Gaming &amp; High Performance" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Gaming Laptops</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">High Performance</p>
+    </a>
+
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/refurbished_laptop.png" alt="Business Laptops" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Business Laptops</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">Power &amp; Productivity</p>
+    </a>
+
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/digital_board.png" alt="Digital Smart Boards" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Interactive Boards</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">Classrooms &amp; Offices</p>
+    </a>
+
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/canon_printers.png" alt="Printers &amp; Office" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Canon Printers</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">Ink Tank &amp; Laser</p>
+    </a>
+
+    <a href="our-products.html" class="group bg-white rounded-xl p-4 border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+      <div class="w-20 h-20 rounded-xl bg-slate-50 flex items-center justify-center p-2 mb-3 group-hover:scale-110 transition-transform">
+        <img src="images/microtek_ups.png" alt="Power &amp; UPS Backup" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors">Power &amp; UPS</h3>
+      <p class="text-[11px] text-slate-500 mt-0.5">Heavy Duty Microtek</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     2x2 PROMO GRID
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+    <a href="our-products.html" class="group rounded-2xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col relative h-52">
+      <div class="absolute inset-0 overflow-hidden bg-slate-100">
+        <img src="images/microtek_ups.png" alt="Microtek Heavy Duty UPS" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent"></div>
+      </div>
+      <div class="relative z-10 mt-auto p-4 text-white">
+        <span class="inline-block px-2.5 py-0.5 rounded-md bg-amber-400 text-slate-950 text-[10px] font-extrabold uppercase tracking-wider mb-1.5">Power Deals</span>
+        <p class="text-xs font-bold leading-snug text-white group-hover:text-amber-300 transition-colors">CATCH BIG DEALS ON THE MICROTEK UPS</p>
+        <span class="inline-flex items-center gap-1 mt-2 text-[11px] font-extrabold text-amber-300 group-hover:translate-x-1 transition-transform">SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="our-products.html" class="group rounded-2xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col relative h-52">
+      <div class="absolute inset-0 overflow-hidden bg-slate-100">
+        <img src="images/laptop_3d_white.jpg" alt="Certified Refurbished Laptop" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent"></div>
+      </div>
+      <div class="relative z-10 mt-auto p-4 text-white">
+        <span class="inline-block px-2.5 py-0.5 rounded-md bg-electric text-white text-[10px] font-extrabold uppercase tracking-wider mb-1.5">1 Year Warranty</span>
+        <p class="text-xs font-bold leading-snug text-white group-hover:text-cyan-300 transition-colors">CERTIFIED REFURBISHED LAPTOP · 50-POINT AUDIT</p>
+        <span class="inline-flex items-center gap-1 mt-2 text-[11px] font-extrabold text-cyan-300 group-hover:translate-x-1 transition-transform">SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="our-products.html" class="group rounded-2xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col relative h-52">
+      <div class="absolute inset-0 overflow-hidden bg-slate-100">
+        <img src="images/monitors.png" alt="4K BenQ &amp; Samsung Monitors" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent"></div>
+      </div>
+      <div class="relative z-10 mt-auto p-4 text-white">
+        <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500 text-white text-[10px] font-extrabold uppercase tracking-wider mb-1.5">Top Sellers</span>
+        <p class="text-xs font-bold leading-snug text-white group-hover:text-emerald-300 transition-colors">BEST DEALS ON MONITORS — BENQ &amp; SAMSUNG</p>
+        <span class="inline-flex items-center gap-1 mt-2 text-[11px] font-extrabold text-emerald-300 group-hover:translate-x-1 transition-transform">SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="our-products.html" class="group rounded-2xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col relative h-52">
+      <div class="absolute inset-0 overflow-hidden bg-slate-100">
+        <img src="images/digital_board.png" alt="AI Interactive Digital Board" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent"></div>
+      </div>
+      <div class="relative z-10 mt-auto p-4 text-white">
+        <span class="inline-block px-2.5 py-0.5 rounded-md bg-purple-600 text-white text-[10px] font-extrabold uppercase tracking-wider mb-1.5">Smart Classrooms</span>
+        <p class="text-xs font-bold leading-snug text-white group-hover:text-purple-300 transition-colors">AI DIGITAL BOARD FOR ALL TYPES OF CLASSES</p>
+        <span class="inline-flex items-center gap-1 mt-2 text-[11px] font-extrabold text-purple-300 group-hover:translate-x-1 transition-transform">SHOP NOW →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     POPULAR LAPTOPS & PRODUCTS
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-200">
+    <h2 class="font-display font-black text-xl sm:text-2xl text-navy-900 tracking-tight uppercase">POPULAR PRODUCTS</h2>
+    <a href="our-products.html" class="text-xs font-extrabold text-electric hover:text-electric-dark flex items-center gap-1 uppercase tracking-wider">
+      VIEW ALL PRODUCTS →
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+    <article class="bg-white rounded-xl border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-3.5 group">
+      <div>
+        <div class="aspect-square bg-slate-50 rounded-lg p-3 flex items-center justify-center relative overflow-hidden mb-3">
+          <span class="absolute top-2 left-2 bg-sale text-white text-[10px] font-extrabold px-2 py-0.5 rounded shadow-xs">-38%</span>
+          <img src="images/digital_board.png" alt="Logic Interactive Digital Board 65&quot;" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+        </div>
+        <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors line-clamp-2">Logic Interactive Digital Board 65"</h3>
+        <p class="text-[11px] text-slate-500 mt-1 font-medium">4K Ultra HD | Dual OS Support</p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="font-display font-black text-base text-navy-900">₹12,500.00</span>
+          <span class="text-xs text-slate-400 line-through block text-[11px]">₹20,000.00</span>
+        </div>
+        <button aria-label="Add to cart" class="w-9 h-9 rounded-lg bg-slate-100 group-hover:bg-electric text-slate-700 group-hover:text-white flex items-center justify-center transition shadow-xs">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-xl border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-3.5 group">
+      <div>
+        <div class="aspect-square bg-slate-50 rounded-lg p-3 flex items-center justify-center relative overflow-hidden mb-3">
+          <img src="images/microtek_ups.png" alt="Microtek UPS 1KVA Sinewave" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+        </div>
+        <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors line-clamp-2">Microtek UPS 1KVA Sinewave</h3>
+        <p class="text-[11px] text-slate-500 mt-1 font-medium">Heavy Duty Power Backup</p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="font-display font-black text-base text-navy-900">₹4,299.00</span>
+        </div>
+        <button aria-label="Add to cart" class="w-9 h-9 rounded-lg bg-slate-100 group-hover:bg-electric text-slate-700 group-hover:text-white flex items-center justify-center transition shadow-xs">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-xl border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-3.5 group">
+      <div>
+        <div class="aspect-square bg-slate-50 rounded-lg p-3 flex items-center justify-center relative overflow-hidden mb-3">
+          <span class="absolute top-2 left-2 bg-sale text-white text-[10px] font-extrabold px-2 py-0.5 rounded shadow-xs">-15%</span>
+          <img src="images/laptop_3d_white.jpg" alt="Dell Certified Refurbished Laptop i5" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+        </div>
+        <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors line-clamp-2">Dell Certified Refurbished Laptop i5</h3>
+        <p class="text-[11px] text-slate-500 mt-1 font-medium">16GB RAM | 512GB SSD | 1-Yr Warranty</p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="font-display font-black text-base text-navy-900">₹18,999.00</span>
+          <span class="text-xs text-slate-400 line-through block text-[11px]">₹22,499.00</span>
+        </div>
+        <button aria-label="Add to cart" class="w-9 h-9 rounded-lg bg-slate-100 group-hover:bg-electric text-slate-700 group-hover:text-white flex items-center justify-center transition shadow-xs">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-xl border border-slate-200 hover:border-electric shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-3.5 group">
+      <div>
+        <div class="aspect-square bg-slate-50 rounded-lg p-3 flex items-center justify-center relative overflow-hidden mb-3">
+          <img src="images/monitors.png" alt="BenQ 27&quot; QHD Monitor" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+        </div>
+        <h3 class="font-display font-bold text-sm text-navy-900 group-hover:text-electric transition-colors line-clamp-2">BenQ 27" QHD Monitor</h3>
+        <p class="text-[11px] text-slate-500 mt-1 font-medium">IPS Eye-Care Display</p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="font-display font-black text-base text-navy-900">₹15,750.00</span>
+        </div>
+        <button aria-label="Add to cart" class="w-9 h-9 rounded-lg bg-slate-100 group-hover:bg-electric text-slate-700 group-hover:text-white flex items-center justify-center transition shadow-xs">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     NEWSLETTER SUBSCRIPTION SECTION
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 py-8">
+  <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-electric rounded-2xl p-6 sm:p-10 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4 text-center lg:text-left">
+      <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 hidden sm:flex">
+        <svg class="w-7 h-7 text-cyan-400" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-400 block">STAY UPDATED</span>
+        <h3 class="font-display font-black text-xl sm:text-2xl mt-0.5">Subscribe to Newsletter</h3>
+        <p class="text-slate-300 text-xs sm:text-sm mt-1 font-medium">Get exclusive deals, new arrivals, and corporate hardware offers in your inbox.</p>
+      </div>
+    </div>
+
+    <form class="w-full lg:max-w-md flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Vanishka Enterprises!');">
+      <input type="email" required placeholder="Enter your business email" class="flex-1 px-4 py-3 rounded-xl text-slate-900 text-sm outline-none font-medium placeholder-slate-400" />
+      <button type="submit" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-extrabold transition text-xs uppercase tracking-wider shrink-0 shadow-md">
+        SUBSCRIBE
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+<footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+
+      <div class="lg:col-span-1">
+        <a href="index.html" class="flex items-center gap-3 mb-4 group">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-sm">
+            <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain" />
+          </div>
+          <span class="font-display font-black text-lg text-electric tracking-tight">VANISHKA ENTERPRISES</span>
+        </a>
+        <p class="text-xs text-slate-400 leading-relaxed font-normal">
+          Authorized enterprise partner providing certified refurbished laptops, Canon printers, AI smart boards, Microtek UPS, and IT hardware.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+          <li><a href="about-us.html" class="hover:text-cyan-400 transition">About Us</a></li>
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CUSTOMER SERVICE</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Track Order</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Shipping &amp; Delivery</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">1-Year Warranty</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Returns &amp; Refunds</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
+          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CONTACT US</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Tech Hub Street, Pune / MH 411001</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="font-bold text-white">(+91) 86005 72488</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+      <p>© 2026 <span class="text-slate-300 font-bold">Vanishka Enterprises</span>. All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="hover:text-slate-300 transition">Privacy Policy</a>
+        <span>|</span>
+        <a href="contact.html" class="hover:text-slate-300 transition">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" aria-label="Chat on WhatsApp" class="fixed right-5 bottom-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+</a>
+
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // Mobile Menu Toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Keyboard Shortcut (Ctrl+K focus search)
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.focus();
+    }
+  });
+
+  // Hero Slider Logic
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const prevBtn = document.getElementById('hero-prev-btn');
+  const nextBtn = document.getElementById('hero-next-btn');
+
+  let activeIndex = 0;
+  let timer = null;
+
+  function setSlide(idx) {
+    if (slides.length === 0) return;
+    activeIndex = (idx + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      if (i === activeIndex) {
+        slide.classList.add('active-slide');
+      } else {
+        slide.classList.remove('active-slide');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === activeIndex) {
+        dot.className = 'hero-dot w-8 h-2.5 rounded-full bg-electric transition-all duration-300 cursor-pointer shadow-xs';
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.className = 'hero-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-electric/60 transition-all duration-300 cursor-pointer';
+        dot.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    timer = setInterval(() => setSlide(activeIndex + 1), 6000);
+  }
+
+  function stopAutoPlay() {
+    if (timer) clearInterval(timer);
+  }
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => { setSlide(activeIndex - 1); startAutoPlay(); });
+    nextBtn.addEventListener('click', () => { setSlide(activeIndex + 1); startAutoPlay(); });
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { setSlide(i); startAutoPlay(); });
+    });
+    startAutoPlay();
+  }
+
+  // 3D Interactive Mouse Tilt Physics
+  const spatialStages = document.querySelectorAll('.spatial-3d-stage');
+  spatialStages.forEach(stage => {
+    const card = stage.querySelector('.spatial-3d-card');
+    if (!card) return;
+
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      const rotateX = (y / (rect.height / 2)) * -14;
+      const rotateY = (x / (rect.width / 2)) * 14;
+      
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    stage.addEventListener('mouseleave', () => {
+      card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    });
+  });
+</script>
+
+</body>
+</html>

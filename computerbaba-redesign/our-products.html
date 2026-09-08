@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products Catalog | Vanishka Enterprises</title>
+  <meta name="description" content="Explore complete computer, technology & security product catalog. Refurbished laptops, printers, monitors, digital boards, UPS, storage & networking equipment at lowest prices." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:     { DEFAULT: '#0F172A', 50: '#F8FAFC', 100: '#F1F5F9', 800: '#1E293B', 900: '#0F172A', 950: '#020617' },
+            electric: { DEFAULT: '#2563EB', light: '#3B82F6', dark: '#1D4ED8' },
+            cyan:     { DEFAULT: '#06B6D4', light: '#22D3EE', dark: '#0891B2' },
+            sale:     '#E41E3F',
+            fb:       '#0F4C81',
+            'fb-dark': '#0B3A63',
+            'fb-darker': '#072642',
+            'fb-tint': '#F0F7FF',
+            ink:      '#0F172A',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .glass-header {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- ==========================================
+       STICKY GLASSMORPHISM NAVBAR (Exact Specs)
+       ========================================== -->
+  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex items-center justify-between gap-4 lg:gap-6">
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-md shadow-slate-900/30 group-hover:scale-105 transition-transform duration-200">
+            <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain filter drop-shadow" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <span class="font-display font-extrabold text-lg sm:text-xl text-electric tracking-tight leading-none transition-colors">VANISHKA ENTERPRISES</span>
+            <div class="flex items-center justify-between text-[7.5px] sm:text-[8.5px] font-bold text-amber-600 uppercase tracking-wider w-full mt-0.5">
+              <span>COMPUTERS</span>
+              <span class="text-amber-500/70">•</span>
+              <span>LAPTOPS</span>
+              <span class="text-amber-500/70">•</span>
+              <span>HARDWARE</span>
+              <span class="text-amber-500/70">•</span>
+              <span>NETWORKING</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Home</a>
+          <a href="about-us.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">About Us</a>
+          <a href="our-products.html" class="px-3.5 py-2 rounded-lg bg-electric/10 text-electric font-extrabold transition">Products</a>
+          <a href="contact.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions (Subtle Search Bar with Ctrl+K, Cart) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          
+          <!-- Subtle Search Bar with Ctrl+K Badge -->
+          <div class="hidden md:flex items-center bg-slate-100/90 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-500 focus-within:bg-white focus-within:border-electric focus-within:ring-2 focus-within:ring-electric/20 transition-all w-48 xl:w-56 cursor-pointer" onclick="document.getElementById('catalog-search-input')?.focus();">
+            <svg class="w-4 h-4 text-slate-400 shrink-0 mr-2" viewBox="0 0 24 24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="text" placeholder="Search IT hardware..." class="bg-transparent w-full text-slate-800 placeholder-slate-400 outline-none text-xs" />
+            <kbd class="hidden xl:inline-block bg-white border border-slate-300 rounded px-1.5 py-0.5 text-[10px] font-semibold text-slate-400 shadow-2xs shrink-0">Ctrl+K</kbd>
+          </div>
+
+          <!-- Cart Icon with Item Count Badge -->
+          <a href="our-products.html" aria-label="Cart" class="relative p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-electric transition group">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+            <span class="absolute top-1 right-1 bg-electric text-white text-[10px] font-black min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center border-2 border-white shadow-xs">0</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-slate-800 shadow-xl">
+      <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Home</a>
+      <a href="about-us.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">About Us</a>
+      <a href="our-products.html" class="block px-3 py-2 rounded-md bg-electric/10 text-electric font-bold">Products &amp; Laptops</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HERO / CATALOG HEADER (BRAND LIGHT GRADIENT MATCHING HOMEPAGE) ============ -->
+  <section class="bg-gradient-to-b from-fb-tint via-blue-50/70 to-white text-ink py-8 border-b border-fb/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs text-fb font-extrabold mb-1 uppercase tracking-wider">
+            <span class="bg-fb/10 text-fb px-2.5 py-0.5 rounded-full">Complete Hardware Catalog</span>
+            <span>•</span>
+            <span class="text-emerald-700">Lowest Price Guarantee</span>
+          </div>
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl text-fb">Our Complete Product Catalog</h1>
+          <p class="text-ink/70 text-xs sm:text-sm mt-1">Select a category below to filter products or click any item to view detailed specifications, size options &amp; buy directly.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-fb/15 shadow-sm shrink-0">
+          <div class="text-right">
+            <span class="block text-xs text-slate-500 font-medium">Have bulk order inquiry?</span>
+            <span class="block text-sm font-extrabold text-fb">Call: +91 86005 72488</span>
+          </div>
+          <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" class="p-2.5 rounded-xl bg-emerald-500 text-white hover:bg-emerald-600 transition shadow">💬</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CATALOG CONTENT (LAYOUT MATCHING USER SCREENSHOTS) ============ -->
+  <main class="max-w-7xl mx-auto px-4 py-8 flex-1 w-full">
+    <div class="grid lg:grid-cols-12 gap-8">
+      
+      <!-- ============ LEFT SIDEBAR (CATEGORIES & TRUST BADGES) ============ -->
+      <aside class="lg:col-span-3 space-y-6">
+        
+        <!-- Category Sidebar Box -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sticky top-24">
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+            <h2 class="font-display font-bold text-slate-900 text-base flex items-center gap-2">
+              <svg class="w-4 h-4 text-fb" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Categories
+            </h2>
+            <button id="resetCategoryFilterBtn" class="text-[11px] font-semibold text-fb hover:underline">Show All</button>
+          </div>
+
+          <div class="space-y-1 text-sm font-medium custom-scrollbar max-h-[480px] overflow-y-auto pr-1" id="sidebarCategoryList">
+            <!-- Categories rendered dynamically -->
+          </div>
+
+          <!-- Trust Badges (Matching Screenshot 3) -->
+          <div class="mt-6 pt-5 border-t border-slate-200/80 space-y-4">
+            
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-200/60">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M5 18h14M5 14h14M3 6h18l-2 5H5L3 6z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-xs">Free Delivery</h4>
+                <p class="text-[11px] text-slate-500 leading-tight">Orders Above ₹10,000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-200/60">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-xs">99% Excellent</h4>
+                <p class="text-[11px] text-slate-500 leading-tight">Customer Support</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-200/60">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-xs">36 Years+</h4>
+                <p class="text-[11px] text-slate-500 leading-tight">in the industry</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-200/60">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-xs">Secure</h4>
+                <p class="text-[11px] text-slate-500 leading-tight">Payment System</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-200/60">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M7 7h10M7 12h10M7 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-xs">Only Best</h4>
+                <p class="text-[11px] text-slate-500 leading-tight">Brands</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ============ RIGHT PRODUCT LISTING & FILTERING AREA ============ -->
+      <section class="lg:col-span-9 space-y-6">
+        
+        <!-- Filter Header Bar -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-slate-500">Active Category:</span>
+            <span id="activeCategoryBadge" class="px-3 py-1 rounded-full bg-fb/10 text-fb font-extrabold text-xs">All Categories</span>
+            <span id="productCountBadge" class="text-xs text-slate-400 font-medium">(8 Products)</span>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+            <label for="sortSelect" class="text-xs font-semibold text-slate-500 shrink-0">Sort By:</label>
+            <select id="sortSelect" class="px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 border border-slate-200 outline-none focus:ring-2 focus:ring-fb">
+              <option value="featured">Featured First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Subcategory Pills Carousel -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar" id="subcategoryPillsContainer">
+          <!-- Subcategory pills rendered dynamically -->
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productsGrid">
+          <!-- Product Cards rendered dynamically -->
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ PRODUCT DETAIL MODAL (EXACT MATCHING USER SCREENSHOTS 2 & 3) ============ -->
+  <div id="productModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 opacity-0 invisible transition-all duration-300 overflow-y-auto">
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto custom-scrollbar relative p-4 sm:p-8 my-auto">
+      
+      <!-- Close Modal Button -->
+      <button id="closeModalBtn" aria-label="Close" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center font-bold text-lg transition z-20">
+        ✕
+      </button>
+
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Product Image & Thumbnail Gallery -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 aspect-square flex items-center justify-center overflow-hidden relative group">
+            <span id="modalDiscountBadge" class="absolute top-3 left-3 bg-sale text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow z-10">-38%</span>
+            <img id="modalMainImage" src="" alt="Product view" class="max-h-full max-w-full object-contain filter drop-shadow transition-all duration-300" />
+          </div>
+
+          <!-- Thumbnail Selector -->
+          <div class="grid grid-cols-4 gap-2" id="modalThumbnailGallery">
+            <!-- Thumbnails inserted dynamically -->
+          </div>
+        </div>
+
+        <!-- Right: Detailed Product Purchase Info -->
+        <div class="md:col-span-7 space-y-4">
+          
+          <div>
+            <span id="modalBrandTag" class="text-xs font-extrabold text-slate-400 uppercase tracking-wider block mb-1">Vanishka Enterprises</span>
+            <h2 id="modalTitle" class="font-display font-extrabold text-slate-900 text-lg sm:text-2xl leading-snug">
+              Cybernetyx Eyeris A10 Pro Ai Interactive Digital Board With Camera &amp; Mic
+            </h2>
+          </div>
+
+          <!-- Social Share & Stock Status -->
+          <div class="flex flex-wrap items-center gap-3 text-xs">
+            <div class="flex items-center gap-2">
+              <button class="bg-[#1877F2] text-white font-bold px-2.5 py-1 rounded text-[11px] flex items-center gap-1 hover:opacity-90">f Share</button>
+              <button class="bg-[#1DA1F2] text-white font-bold px-2.5 py-1 rounded text-[11px] flex items-center gap-1 hover:opacity-90">🐦 Tweet</button>
+            </div>
+            <span class="text-slate-300">|</span>
+            <span id="modalStockStatus" class="font-bold text-emerald-600">Available: Only 5 items in stock</span>
+          </div>
+
+          <!-- Price Display -->
+          <div class="py-2 border-y border-slate-100 flex items-baseline gap-3">
+            <span id="modalPrice" class="font-display font-black text-slate-900 text-2xl sm:text-3xl">Rs. 95,999.00</span>
+            <span id="modalOldPrice" class="text-slate-400 line-through text-base font-semibold">Rs. 120,000.00</span>
+          </div>
+
+          <!-- Size / Variant Selector (Matching Screenshot 2) -->
+          <div class="space-y-2" id="modalVariantSection">
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide">Size / Option:</label>
+            <div class="flex flex-wrap gap-2" id="modalVariantOptions">
+              <button class="variant-pill px-4 py-2 rounded-full border-2 border-brandyellow bg-amber-50 text-slate-900 font-extrabold text-xs shadow-sm">65 inch Screen Size</button>
+              <button class="variant-pill px-4 py-2 rounded-full border border-slate-300 bg-white text-slate-700 font-bold text-xs hover:border-slate-400">75 inch Screen Size</button>
+              <button class="variant-pill px-4 py-2 rounded-full border border-slate-300 bg-white text-slate-700 font-bold text-xs hover:border-slate-400">86 inch Screen Size</button>
+            </div>
+          </div>
+
+          <!-- Quantity Selector & Action Buttons (Matching Screenshot 2 & 3) -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <label for="modalQtyInput" class="text-xs font-bold text-slate-700">Quantity:</label>
+              <div class="flex items-center rounded-xl border border-slate-300 bg-slate-50 overflow-hidden text-sm">
+                <button id="qtyMinusBtn" class="px-3 py-1.5 font-bold hover:bg-slate-200 text-slate-700">-</button>
+                <input type="number" id="modalQtyInput" value="1" min="1" max="10" class="w-10 text-center font-extrabold bg-transparent outline-none text-slate-900" />
+                <button id="qtyPlusBtn" class="px-3 py-1.5 font-bold hover:bg-slate-200 text-slate-700">+</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" class="w-full py-3.5 px-6 rounded-2xl bg-brandyellow hover:bg-brandyellowhover text-slate-950 font-black text-sm text-center shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                🛒 Add to Cart
+              </a>
+              <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" class="w-full py-3.5 px-6 rounded-2xl bg-slate-800 hover:bg-slate-950 text-white font-extrabold text-sm text-center shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                Buy it now
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Proof Indicator (Matching Screenshot 3) -->
+          <div class="p-3 rounded-xl bg-amber-50 border border-amber-200/80 flex items-center gap-3 text-xs font-medium text-amber-900">
+            <span class="text-xl">🛒</span>
+            <div>
+              <strong class="font-extrabold block">Other people want this.</strong>
+              <span>17 people have this in their carts right now.</span>
+            </div>
+          </div>
+
+          <!-- Delivery Estimate (Matching Screenshot 3) -->
+          <div class="text-xs text-slate-600 space-y-0.5">
+            <p>Want it delivered by <strong class="text-slate-900">Friday, 21 August</strong></p>
+            <p class="text-slate-500">Order today until <strong class="text-amber-600 font-bold">14:00</strong></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Tabs: Description, Shipping & Returns, Reviews (Matching Screenshot 3) -->
+      <div class="mt-8 pt-6 border-t border-slate-200 space-y-4">
+        
+        <!-- Tab Headers -->
+        <div class="flex items-center gap-6 border-b border-slate-200 text-sm font-bold text-slate-500">
+          <button class="modal-tab-btn active pb-3 text-fb border-b-2 border-fb font-extrabold" data-tab="desc">Description</button>
+          <button class="modal-tab-btn pb-3 hover:text-slate-900" data-tab="shipping">Shipping &amp; Returns</button>
+          <button class="modal-tab-btn pb-3 hover:text-slate-900" data-tab="reviews">Reviews (4.9 ★)</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="tabContentDesc" class="modal-tab-content space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p id="modalDescriptionText">
+            High quality commercial display board engineered for smart classrooms and corporate boardrooms. Features 4K UHD anti-glare glass, 20-point multi-touch interactive whiteboard software, built-in 4K camera and noise-canceling microphone array.
+          </p>
+          
+          <!-- Embedded Video Preview Box (Matching Screenshot 3) -->
+          <div class="mt-4 p-4 rounded-2xl bg-slate-900 text-white space-y-3">
+            <h4 class="font-extrabold text-amber-300 text-xs sm:text-sm flex items-center gap-2">
+              <span>👉</span> Watch Unboxing &amp; Review Video of Product:
+            </h4>
+            <div class="relative aspect-video rounded-xl bg-slate-950 overflow-hidden border border-white/15 flex items-center justify-center group cursor-pointer">
+              <img id="modalVideoThumbnail" src="images/digital_board.png" alt="Video thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" />
+              <div class="absolute w-14 h-14 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xl shadow-2xl group-hover:scale-110 transition">
+                ▶
+              </div>
+              <span class="absolute bottom-2 left-2 bg-slate-950/80 px-2 py-0.5 rounded text-[10px] text-white">Full Review 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabContentShipping" class="modal-tab-content hidden space-y-2 text-xs sm:text-sm text-slate-600">
+          <p class="font-bold text-slate-900">Express Insured Transit across India:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Free delivery on all orders above ₹10,000.</li>
+            <li>Dispatched within 24 hours with real-time tracking code.</li>
+            <li>On-site technician assistance available for Digital Board &amp; Printer setup.</li>
+          </ul>
+        </div>
+
+        <div id="tabContentReviews" class="modal-tab-content hidden space-y-3 text-xs sm:text-sm text-slate-600">
+          <div class="flex items-center gap-2 text-amber-500 font-extrabold text-base">
+            ★★★★★ <span class="text-xs text-slate-700 font-semibold">(4.9/5 based on 48 customer reviews)</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="flex justify-between font-extrabold text-xs text-slate-900 mb-1">
+              <span>Rohan Sharma (Educational Institute Director)</span>
+              <span class="text-emerald-600">Verified Buyer</span>
+            </div>
+            <p class="text-xs text-slate-600">"Excellent build quality and fast delivery. Vanishka Enterprises provided prompt installation support!"</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4 group">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-sm">
+              <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain" />
+            </div>
+            <span class="font-display font-black text-lg text-electric tracking-tight">VANISHKA ENTERPRISES</span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed font-normal">
+            Authorized enterprise partner providing certified refurbished laptops, Canon printers, AI smart boards, Microtek UPS, and IT hardware.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-cyan-400 transition">About Us</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CUSTOMER SERVICE</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Track Order</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Shipping &amp; Delivery</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">1-Year Warranty</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Returns &amp; Refunds</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
+            <li><a href="our-products.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CONTACT US</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"/></svg>
+              <span>Tech Hub Street, Pune / MH 411001</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+              <span class="font-bold text-white">(+91) 86005 72488</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <p>© 2026 <span class="text-slate-300 font-bold">Vanishka Enterprises</span>. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="contact.html" class="hover:text-slate-300 transition">Privacy Policy</a>
+          <span>|</span>
+          <a href="contact.html" class="hover:text-slate-300 transition">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank" aria-label="Chat on WhatsApp" class="fixed right-5 bottom-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+  </a>
+
+  <!-- ============ INTERACTIVE CATALOG JS SCRIPT ============ -->
+  <script>
+    // Master Product Catalog Database (Based on Image 1 Catalog)
+    const CATALOG_DATA = [
+      {
+        id: 'p1',
+        category: 'Interactive Digital Board',
+        categoryGroup: 'Monitors & Displays',
+        title: 'Cybernetyx Eyeris A10 Pro AI Interactive Digital Board With Camera & Mic',
+        brand: 'Cybernetyx',
+        price: 95999,
+        oldPrice: 120000,
+        discount: '-38%',
+        stock: 'Available: Only 5 items in stock',
+        image: 'images/digital_board.png',
+        thumbnails: ['images/digital_board.png', 'images/monitors.png', 'images/laptop_3d_white.jpg'],
+        subcategories: ['65 inch', '75 inch', '86 inch', 'AI Smart Class'],
+        variants: ['65 inch Screen Size', '75 inch Screen Size', '86 inch Screen Size'],
+        description: 'Cybernetyx Eyeris A10 Pro Ai Interactive Digital Board With Camera & Mic With Brightclass Ai Suite, Android 14, 8GB RAM, 128GB Storage, Google Play Store, Grey/White.'
+      },
+      {
+        id: 'p2',
+        category: 'Computers & Laptops',
+        categoryGroup: 'Computers & Laptops',
+        title: 'Dell Certified Refurbished Business Laptop i5 (50-Point Audited)',
+        brand: 'Dell',
+        price: 18999,
+        oldPrice: 22499,
+        discount: '-15%',
+        stock: 'Available: 12 items in stock',
+        image: 'images/laptop_3d_white.jpg',
+        thumbnails: ['images/laptop_3d_white.jpg', 'images/canon_printers.png'],
+        subcategories: ['Refurbished Laptops', 'Intel Core i5', 'Workstations'],
+        variants: ['8GB RAM / 256GB SSD', '16GB RAM / 512GB SSD'],
+        description: 'Certified Refurbished Dell Latitude Commercial Laptop with Intel Core i5 processor, 1-Year Comprehensive Warranty, and 50-point quality audit.'
+      },
+      {
+        id: 'p3',
+        category: 'Printers & Office Equipment',
+        categoryGroup: 'Printers & Office Equipment',
+        title: 'Canon MegaTank G3720 All-in-One High Efficiency Ink-Tank Printer',
+        brand: 'Canon',
+        price: 19499,
+        oldPrice: 24000,
+        discount: '-18%',
+        stock: 'Available: 8 items in stock',
+        image: 'images/canon_printers.png',
+        thumbnails: ['images/canon_printers.png', 'images/digital_board.png'],
+        subcategories: ['Inkjet Printers', 'All-in-One Printers', 'Wi-Fi Printers'],
+        variants: ['Standard Wi-Fi Model', 'Duplex Auto Print Model'],
+        description: 'Canon High-Efficiency Ink-tank printer with wireless Wi-Fi printing, high yield ink bottles, and original manufacturer warranty.'
+      },
+      {
+        id: 'p4',
+        category: 'Power & Protection',
+        categoryGroup: 'Power & Protection',
+        title: 'Microtek UPS 1KVA Sinewave Heavy-Duty Power Backup',
+        brand: 'Microtek',
+        price: 4299,
+        oldPrice: 5500,
+        discount: '-22%',
+        stock: 'Available: 15 items in stock',
+        image: 'images/microtek_ups.png',
+        thumbnails: ['images/microtek_ups.png'],
+        subcategories: ['UPS', 'SMPS', 'Surge Protectors'],
+        variants: ['1 KVA Sinewave', '2 KVA Sinewave'],
+        description: 'Microtek 1KVA Line Interactive Sinewave UPS with intelligent battery management and voltage stabilization.'
+      },
+      {
+        id: 'p5',
+        category: 'Monitors & Displays',
+        categoryGroup: 'Monitors & Displays',
+        title: 'BenQ 27" QHD IPS Professional Color-Calibrated Monitor',
+        brand: 'BenQ',
+        price: 15750,
+        oldPrice: 19999,
+        discount: '-21%',
+        stock: 'Available: 6 items in stock',
+        image: 'images/monitors.png',
+        thumbnails: ['images/monitors.png', 'images/digital_board.png'],
+        subcategories: ['4K Monitors', 'LED Monitors', 'Gaming Monitors'],
+        variants: ['27 inch QHD', '32 inch 4K UHD'],
+        description: 'BenQ 27-inch 2K QHD IPS Monitor featuring Eye-Care tech, frameless display, HDMI/DisplayPort inputs, and dual speaker setup.'
+      },
+      {
+        id: 'p6',
+        category: 'Computers & Laptops',
+        categoryGroup: 'Computers & Laptops',
+        title: 'Lenovo ThinkPad Refurbished Core i7 High Performance Laptop',
+        brand: 'Lenovo',
+        price: 24999,
+        oldPrice: 32000,
+        discount: '-22%',
+        stock: 'Available: 4 items in stock',
+        image: 'images/laptop_3d_white.jpg',
+        thumbnails: ['images/laptop_3d_white.jpg'],
+        subcategories: ['Refurbished Laptops', 'Intel Core i7', 'Business PCs'],
+        variants: ['16GB RAM / 512GB NVMe SSD'],
+        description: 'Ultra durable Lenovo ThinkPad business laptop with Intel Core i7, NVMe SSD storage, and backlit keyboard.'
+      },
+      {
+        id: 'p7',
+        category: 'Interactive Digital Board',
+        categoryGroup: 'Monitors & Displays',
+        title: 'LG 65" Ultra HD 4K Interactive Digital Smart Classroom Board',
+        brand: 'LG',
+        price: 91999,
+        oldPrice: 115000,
+        discount: '-20%',
+        stock: 'Available: 3 items in stock',
+        image: 'images/digital_board.png',
+        thumbnails: ['images/digital_board.png', 'images/monitors.png'],
+        subcategories: ['65 inch', 'Commercial TV', 'Projectors'],
+        variants: ['65 inch 4K', '75 inch 4K'],
+        description: 'LG Commercial Interactive Digital Board with IPS 4K panel, dual OS support, screen sharing, and multi-pen writing.'
+      },
+      {
+        id: 'p8',
+        category: 'Monitors & Displays',
+        categoryGroup: 'Monitors & Displays',
+        title: 'Samsung 27" Curved 144Hz Gaming & Multitasking Monitor',
+        brand: 'Samsung',
+        price: 21999,
+        oldPrice: 27999,
+        discount: '-21%',
+        stock: 'Available: 9 items in stock',
+        image: 'images/monitors.png',
+        thumbnails: ['images/monitors.png'],
+        subcategories: ['Curved Monitors', 'Gaming Monitors'],
+        variants: ['27 inch Curved 144Hz'],
+        description: 'Samsung Curved Gaming Monitor with 144Hz refresh rate, AMD FreeSync, and ultra-wide panoramic viewing angles.'
+      }
+    ];
+
+    // Master Sidebar Categories (Matching Image 1 Catalog)
+    const SIDEBAR_CATEGORIES = [
+      { name: 'All Products', icon: '📦' },
+      { name: 'Computers & Laptops', icon: '💻' },
+      { name: 'Monitors & Displays', icon: '🖥️' },
+      { name: 'Interactive Digital Board', icon: '🎨' },
+      { name: 'Printers & Office Equipment', icon: '🖨️' },
+      { name: 'Power & Protection', icon: '🔌' },
+      { name: 'Computer Accessories', icon: '⌨️' },
+      { name: 'Storage & Memory', icon: '💾' },
+      { name: 'Networking Products', icon: '🌐' },
+      { name: 'Gaming Gear', icon: '🎮' },
+      { name: 'PC Components', icon: '⚙️' },
+      { name: 'Mobile & Smart Accessories', icon: '📱' }
+    ];
+
+    // State Variables
+    let currentCategory = 'All Products';
+    let currentSubcategory = 'All';
+    let currentSort = 'featured';
+    let searchQuery = '';
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSidebarCategories();
+      renderSubcategoryPills();
+      renderProducts();
+
+      // Search input handler
+      document.getElementById('headerSearchInput').addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase();
+        renderProducts();
+      });
+
+      // Sort handler
+      document.getElementById('sortSelect').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        renderProducts();
+      });
+
+      // Reset Category Filter
+      document.getElementById('resetCategoryFilterBtn').addEventListener('click', () => {
+        selectCategory('All Products');
+      });
+
+      // Modal Tab Switchers
+      document.querySelectorAll('.modal-tab-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.modal-tab-btn').forEach(b => {
+            b.classList.remove('active', 'text-fb', 'border-b-2', 'border-fb', 'font-extrabold');
+            b.classList.add('text-slate-500');
+          });
+          e.target.classList.add('active', 'text-fb', 'border-b-2', 'border-fb', 'font-extrabold');
+          e.target.classList.remove('text-slate-500');
+
+          const tabName = e.target.dataset.tab;
+          document.querySelectorAll('.modal-tab-content').forEach(c => c.classList.add('hidden'));
+          if(tabName === 'desc') document.getElementById('tabContentDesc').classList.remove('hidden');
+          if(tabName === 'shipping') document.getElementById('tabContentShipping').classList.remove('hidden');
+          if(tabName === 'reviews') document.getElementById('tabContentReviews').classList.remove('hidden');
+        });
+      });
+
+      // Close Modal
+      document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+      document.getElementById('productModal').addEventListener('click', (e) => {
+        if(e.target === document.getElementById('productModal')) closeModal();
+      });
+
+      // Quantity buttons
+      document.getElementById('qtyMinusBtn').addEventListener('click', () => {
+        const inp = document.getElementById('modalQtyInput');
+        if(parseInt(inp.value) > 1) inp.value = parseInt(inp.value) - 1;
+      });
+      document.getElementById('qtyPlusBtn').addEventListener('click', () => {
+        const inp = document.getElementById('modalQtyInput');
+        inp.value = parseInt(inp.value) + 1;
+      });
+    });
+
+    // Render Sidebar Categories
+    function renderSidebarCategories() {
+      const container = document.getElementById('sidebarCategoryList');
+      container.innerHTML = SIDEBAR_CATEGORIES.map(cat => {
+        const isActive = cat.name === currentCategory;
+        const count = cat.name === 'All Products' ? CATALOG_DATA.length : CATALOG_DATA.filter(p => p.category === cat.name || p.categoryGroup === cat.name).length;
+        
+        return `
+          <button onclick="selectCategory('${cat.name}')" class="w-full text-left px-3 py-2 rounded-xl flex items-center justify-between text-xs font-semibold transition ${isActive ? 'bg-fb text-white font-extrabold shadow-sm' : 'text-slate-700 hover:bg-slate-100'}">
+            <span class="flex items-center gap-2">
+              <span>${cat.icon}</span>
+              <span class="truncate">${cat.name}</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] ${isActive ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'} font-extrabold">${count}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    // Render Subcategory Pills
+    function renderSubcategoryPills() {
+      const pillsContainer = document.getElementById('subcategoryPillsContainer');
+      let subcats = ['All'];
+
+      if(currentCategory === 'All Products') {
+        subcats = ['All', 'Refurbished Laptops', '65 inch', '75 inch', 'Inkjet Printers', 'UPS', '4K Monitors', 'Gaming'];
+      } else {
+        const filtered = CATALOG_DATA.filter(p => p.category === currentCategory || p.categoryGroup === currentCategory);
+        const subSet = new Set(['All']);
+        filtered.forEach(p => p.subcategories.forEach(s => subSet.add(s)));
+        subcats = Array.from(subSet);
+      }
+
+      pillsContainer.innerHTML = subcats.map(sub => {
+        const isActive = sub === currentSubcategory;
+        return `
+          <button onclick="selectSubcategory('${sub}')" class="px-3.5 py-1.5 rounded-full text-xs font-extrabold shrink-0 transition ${isActive ? 'bg-amber-400 text-slate-950 shadow' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'}">
+            ${sub}
+          </button>
+        `;
+      }).join('');
+    }
+
+    // Select Category Action
+    function selectCategory(catName) {
+      currentCategory = catName;
+      currentSubcategory = 'All';
+      document.getElementById('activeCategoryBadge').textContent = catName;
+      renderSidebarCategories();
+      renderSubcategoryPills();
+      renderProducts();
+    }
+
+    // Select Subcategory Action
+    function selectSubcategory(subName) {
+      currentSubcategory = subName;
+      renderSubcategoryPills();
+      renderProducts();
+    }
+
+    // Render Products Grid
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      
+      let filtered = CATALOG_DATA.filter(p => {
+        const matchesCat = currentCategory === 'All Products' || p.category === currentCategory || p.categoryGroup === currentCategory;
+        const matchesSubcat = currentSubcategory === 'All' || p.subcategories.includes(currentSubcategory);
+        const matchesSearch = searchQuery === '' || p.title.toLowerCase().includes(searchQuery) || p.brand.toLowerCase().includes(searchQuery);
+        return matchesCat && matchesSubcat && matchesSearch;
+      });
+
+      // Sorting
+      if(currentSort === 'price-low') filtered.sort((a,b) => a.price - b.price);
+      if(currentSort === 'price-high') filtered.sort((a,b) => b.price - a.price);
+      if(currentSort === 'name') filtered.sort((a,b) => a.title.localeCompare(b.title));
+
+      document.getElementById('productCountBadge').textContent = `(${filtered.length} Products)`;
+
+      if(filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center bg-white rounded-2xl border border-slate-200 p-8">
+            <span class="text-4xl block mb-2">🔍</span>
+            <h3 class="font-extrabold text-slate-900 text-base">No Products Found</h3>
+            <p class="text-xs text-slate-500 mt-1">Try selecting a different category or search term.</p>
+            <button onclick="selectCategory('All Products')" class="mt-4 px-4 py-2 rounded-xl bg-fb text-white text-xs font-bold">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <article class="bg-white rounded-2xl border border-slate-200/90 hover:border-fb/40 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="aspect-square bg-slate-50 p-4 relative flex items-center justify-center overflow-hidden">
+            <span class="absolute top-2.5 left-2.5 bg-sale text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow z-10">${p.discount}</span>
+            <img src="${p.image}" alt="${p.title}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <span class="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">${p.brand}</span>
+              <h3 class="font-bold text-slate-900 text-xs sm:text-sm line-clamp-2 group-hover:text-fb transition-colors">${p.title}</h3>
+            </div>
+            
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="font-display font-black text-slate-900 text-base block">₹${p.price.toLocaleString('en-IN')}</span>
+                <span class="text-slate-400 line-through text-[11px]">₹${p.oldPrice.toLocaleString('en-IN')}</span>
+              </div>
+              <button onclick="openProductModal('${p.id}')" class="px-3.5 py-2 rounded-xl bg-brandyellow hover:bg-brandyellowhover text-slate-950 font-extrabold text-xs shadow-sm hover:scale-105 transition">
+                View &amp; Buy
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Open Product Modal (Matching Screenshots 2 & 3)
+    function openProductModal(productId) {
+      const p = CATALOG_DATA.find(item => item.id === productId);
+      if(!p) return;
+
+      document.getElementById('modalMainImage').src = p.image;
+      document.getElementById('modalDiscountBadge').textContent = p.discount;
+      document.getElementById('modalBrandTag').textContent = p.brand;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalStockStatus').textContent = p.stock;
+      document.getElementById('modalPrice').textContent = `Rs. ${p.price.toLocaleString('en-IN')}.00`;
+      document.getElementById('modalOldPrice').textContent = `Rs. ${p.oldPrice.toLocaleString('en-IN')}.00`;
+      document.getElementById('modalDescriptionText').textContent = p.description;
+      document.getElementById('modalVideoThumbnail').src = p.image;
+
+      // Render Thumbnail Gallery
+      const thumbContainer = document.getElementById('modalThumbnailGallery');
+      thumbContainer.innerHTML = p.thumbnails.map((t, idx) => `
+        <button onclick="changeModalMainImage('${t}')" class="rounded-xl border border-slate-200 p-1 bg-slate-50 aspect-square flex items-center justify-center hover:border-brandyellow transition">
+          <img src="${t}" class="max-h-full max-w-full object-contain" />
+        </button>
+      `).join('');
+
+      // Render Variant Options (Matching Screenshot 2)
+      const variantContainer = document.getElementById('modalVariantOptions');
+      variantContainer.innerHTML = p.variants.map((v, idx) => `
+        <button onclick="selectVariantPill(this)" class="variant-pill px-3.5 py-1.5 rounded-full border ${idx === 0 ? 'border-2 border-brandyellow bg-amber-50 font-extrabold text-slate-900' : 'border-slate-300 bg-white font-bold text-slate-700 hover:border-slate-400'} text-xs shadow-sm">
+          ${v}
+        </button>
+      `).join('');
+
+      // Show Modal
+      const modal = document.getElementById('productModal');
+      modal.classList.remove('opacity-0', 'invisible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Change Main Image in Modal
+    function changeModalMainImage(src) {
+      document.getElementById('modalMainImage').src = src;
+    }
+
+    // Select Variant Pill Action
+    function selectVariantPill(btn) {
+      document.querySelectorAll('.variant-pill').forEach(b => {
+        b.className = 'variant-pill px-3.5 py-1.5 rounded-full border border-slate-300 bg-white font-bold text-slate-700 hover:border-slate-400 text-xs shadow-sm';
+      });
+      btn.className = 'variant-pill px-3.5 py-1.5 rounded-full border-2 border-brandyellow bg-amber-50 font-extrabold text-slate-900 text-xs shadow-sm';
+    }
+
+    // Close Modal
+    function closeModal() {
+      const modal = document.getElementById('productModal');
+      modal.classList.add('opacity-0', 'invisible');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+</body>
+</html>
