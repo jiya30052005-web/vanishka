@@ -2430,6 +2430,166 @@
 </section>
 
 <!-- ==========================================
+     GEMINI AI POWERED DIAGNOSTIC TOOL - SYMPTOM CHECKER
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 py-12 sm:py-16 border-t border-slate-100">
+  <!-- Section Header -->
+  <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+    <div class="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-3">
+      <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      <span>GEMINI AI POWERED DIAGNOSTIC TOOL</span>
+    </div>
+    <h2 class="font-display font-black text-3xl sm:text-4xl text-slate-900 tracking-tight">
+      Free AI Laptop &amp; PC Symptom Checker
+    </h2>
+    <p class="text-slate-600 text-sm max-w-xl mx-auto mt-2 leading-relaxed font-normal">
+      Describe your computer issue in plain English. Our AI system will analyze the symptoms, estimate repair costs, and advise doorstep feasibility in Nagpur.
+    </p>
+  </div>
+
+  <!-- Main Diagnostic Container -->
+  <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+    
+    <!-- Left Column: Input Form & Presets (6 Cols) -->
+    <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+      
+      <!-- Top Row: Device Type & Brand/Model -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="ai-device-type" class="block text-xs font-bold text-slate-700 mb-2">Device Type</label>
+          <div class="relative">
+            <select id="ai-device-type" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold focus:outline-none focus:border-indigo-500 transition appearance-none cursor-pointer">
+              <option value="Laptop">Laptop</option>
+              <option value="Desktop PC">Desktop PC</option>
+              <option value="MacBook / iMac">MacBook / iMac</option>
+              <option value="Networking">Networking</option>
+            </select>
+            <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="ai-brand-model" class="block text-xs font-bold text-slate-700 mb-2">Brand / Model</label>
+          <input type="text" id="ai-brand-model" placeholder="Dell / HP / Lenovo" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-medium focus:outline-none focus:border-indigo-500 transition placeholder:text-slate-400" />
+        </div>
+      </div>
+
+      <!-- Symptoms Textarea -->
+      <div>
+        <label for="ai-symptoms-text" class="block text-xs font-bold text-slate-700 mb-2">Describe the Symptoms / Problem</label>
+        <textarea id="ai-symptoms-text" rows="4" placeholder="e.g. Laptop gets very hot on bottom, fan makes loud buzzing noise, then shuts down automatically while working..." class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-2xl p-4 text-xs sm:text-sm font-normal focus:outline-none focus:border-indigo-500 transition resize-none placeholder:text-slate-400"></textarea>
+      </div>
+
+      <!-- Presets List -->
+      <div>
+        <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+          OR CLICK A COMMON SYMPTOM PRESET:
+        </label>
+        <div class="flex flex-wrap gap-2" id="ai-presets-container">
+          <button type="button" data-symptom="Laptop overheating & turning off after 10 minutes" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Laptop overheating &amp; turning off after 10 minutes
+          </button>
+          <button type="button" data-symptom="Windows Blue Screen (BSOD) during boot" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Windows Blue Screen (BSOD) during boot
+          </button>
+          <button type="button" data-symptom="Hard drive making clicking noise & missing files" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Hard drive making clicking noise &amp; missing files
+          </button>
+          <button type="button" data-symptom="Display screen flickering with horizontal lines" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Display screen flickering with horizontal lines
+          </button>
+          <button type="button" data-symptom="Power LED turns on but screen stays completely black" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Power LED turns on but screen stays completely black
+          </button>
+          <button type="button" data-symptom="Wi-Fi icon missing & network cable unplugged error" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
+            + Wi-Fi icon missing &amp; network cable unplugged error
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button type="button" id="btn-analyze-ai" class="w-full py-3.5 px-6 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white font-extrabold text-sm sm:text-base text-center transition shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2 cursor-pointer">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        <span>Analyze Symptoms with Gemini AI</span>
+      </button>
+
+    </div>
+
+    <!-- Right Column: AI Assistant Output Box (6 Cols) -->
+    <div class="lg:col-span-6 bg-slate-50/60 border border-slate-200/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-center items-center min-h-[380px] text-center relative overflow-hidden" id="ai-output-panel">
+      
+      <!-- Initial Ready State -->
+      <div id="ai-state-ready" class="space-y-4 max-w-sm mx-auto">
+        <div class="w-14 h-14 bg-indigo-100/90 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs">
+          <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+        </div>
+        <h3 class="font-display font-bold text-lg text-slate-900">AI Assistant Ready</h3>
+        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+          Type your computer problem on the left or click a preset to receive an instant diagnostic breakdown and Nagpur repair cost range.
+        </p>
+      </div>
+
+      <!-- Loading State (hidden initially) -->
+      <div id="ai-state-loading" class="hidden space-y-4 max-w-sm mx-auto">
+        <div class="w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mx-auto"></div>
+        <h3 class="font-display font-bold text-base text-slate-800">Analyzing Symptoms with Gemini AI...</h3>
+        <p class="text-xs text-slate-500">Checking diagnostic parameters &amp; Nagpur doorstep technician pricing...</p>
+      </div>
+
+      <!-- Analyzed Result State (hidden initially) -->
+      <div id="ai-state-result" class="hidden w-full text-left space-y-5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-indigo-600 uppercase tracking-wider">
+            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            AI DIAGNOSTIC ANALYSIS REPORT
+          </span>
+          <span class="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full" id="ai-res-feasibility">
+            100% Doorstep Ready
+          </span>
+        </div>
+
+        <div class="space-y-3">
+          <div>
+            <span class="text-xs font-semibold text-slate-400 block">Likely Primary Cause:</span>
+            <span class="text-sm font-bold text-slate-900 block mt-0.5" id="ai-res-cause">Thermal Paste Degradation &amp; Fan Dust Clogging</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <div class="bg-white p-3 rounded-xl border border-slate-200/70">
+              <span class="text-[11px] font-medium text-slate-400 block">Severity Level</span>
+              <span class="text-xs font-bold text-amber-600 block mt-0.5" id="ai-res-severity">Medium (Requires Attention)</span>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200/70">
+              <span class="text-[11px] font-medium text-slate-400 block">Est. Doorstep Time</span>
+              <span class="text-xs font-bold text-slate-800 block mt-0.5" id="ai-res-time">30 - 45 Mins</span>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50/80 border border-indigo-100 rounded-2xl p-4">
+            <span class="text-xs font-semibold text-indigo-900 block">Estimated Repair Cost in Nagpur:</span>
+            <span class="font-display font-black text-2xl text-indigo-600 block mt-0.5" id="ai-res-cost">₹399 - ₹699</span>
+            <p class="text-[11px] text-indigo-700/80 mt-1 leading-snug" id="ai-res-recommendation">
+              Includes thermal paste replacement, heatsink fan cleaning &amp; performance optimization.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="contact.html" class="w-full py-3 px-5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20">
+            <span>Book Doorstep Technician for this Issue</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
      FOOTER
      ========================================== -->
 <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
@@ -2660,6 +2820,129 @@
         }
         if (warrantyDisplay && warranty) warrantyDisplay.textContent = warranty;
       });
+    });
+  }
+
+  // Gemini AI Symptom Checker Interactive Handler
+  const aiPresetBtns = document.querySelectorAll('.ai-preset-btn');
+  const aiSymptomsText = document.getElementById('ai-symptoms-text');
+  const btnAnalyzeAi = document.getElementById('btn-analyze-ai');
+  const aiStateReady = document.getElementById('ai-state-ready');
+  const aiStateLoading = document.getElementById('ai-state-loading');
+  const aiStateResult = document.getElementById('ai-state-result');
+
+  const aiResCause = document.getElementById('ai-res-cause');
+  const aiResSeverity = document.getElementById('ai-res-severity');
+  const aiResTime = document.getElementById('ai-res-time');
+  const aiResCost = document.getElementById('ai-res-cost');
+  const aiResRecommendation = document.getElementById('ai-res-recommendation');
+  const aiResFeasibility = document.getElementById('ai-res-feasibility');
+
+  const symptomDatabase = {
+    "overheating": {
+      cause: "Thermal Paste Degradation & Fan Dust Clogging",
+      severity: "Medium (Requires Attention)",
+      time: "30 - 45 Mins",
+      cost: "₹399 - ₹699",
+      rec: "Includes thermal paste replacement, heatsink fan cleaning & performance optimization.",
+      feasibility: "100% Doorstep Ready"
+    },
+    "bsod": {
+      cause: "Corrupted OS System Files or RAM Fault",
+      severity: "Medium",
+      time: "45 - 60 Mins",
+      cost: "₹499 - ₹649",
+      rec: "Includes OS repair/reinstallation, system file recovery & diagnostic check.",
+      feasibility: "100% Doorstep Ready"
+    },
+    "clicking": {
+      cause: "HDD Mechanical Failure / Bad Sectors",
+      severity: "High (Critical Data Risk)",
+      time: "60 - 120 Mins",
+      cost: "₹1,499 - ₹3,999",
+      rec: "Includes cleanroom data extraction, bad sector repair & SSD clone options.",
+      feasibility: "Pickup & Doorstep Available"
+    },
+    "flickering": {
+      cause: "Display Ribbon Cable Loose or IPS Panel Damage",
+      severity: "Medium to High",
+      time: "30 - 60 Mins",
+      cost: "₹2,499 - ₹4,500",
+      rec: "Includes display panel inspection, ribbon connector fix or FHD screen replacement.",
+      feasibility: "100% Doorstep Ready"
+    },
+    "black": {
+      cause: "Motherboard Power IC or RAM Contact Oxide",
+      severity: "High",
+      time: "45 - 90 Mins",
+      cost: "₹599 - ₹1,299",
+      rec: "Includes motherboard power testing, RAM socket cleaning & chip diagnostics.",
+      feasibility: "100% Doorstep Ready"
+    },
+    "wifi": {
+      cause: "Wi-Fi Card Driver Conflict or Antenna Disconnect",
+      severity: "Low",
+      time: "20 - 30 Mins",
+      cost: "₹399 - ₹599",
+      rec: "Includes network driver update, WLAN card testing & LAN port repair.",
+      feasibility: "100% Doorstep Ready"
+    }
+  };
+
+  function runAiAnalysis(text) {
+    if (!aiStateReady || !aiStateLoading || !aiStateResult) return;
+    
+    aiStateReady.classList.add('hidden');
+    aiStateResult.classList.add('hidden');
+    aiStateLoading.classList.remove('hidden');
+
+    setTimeout(() => {
+      aiStateLoading.classList.add('hidden');
+      aiStateResult.classList.remove('hidden');
+
+      const lower = text.toLowerCase();
+      let matchedKey = "overheating";
+
+      if (lower.includes("bsod") || lower.includes("blue screen") || lower.includes("boot")) {
+        matchedKey = "bsod";
+      } else if (lower.includes("clicking") || lower.includes("hard drive") || lower.includes("missing files")) {
+        matchedKey = "clicking";
+      } else if (lower.includes("flickering") || lower.includes("lines") || lower.includes("display")) {
+        matchedKey = "flickering";
+      } else if (lower.includes("black") || lower.includes("power led") || lower.includes("won't turn on")) {
+        matchedKey = "black";
+      } else if (lower.includes("wi-fi") || lower.includes("network") || lower.includes("unplugged")) {
+        matchedKey = "wifi";
+      }
+
+      const data = symptomDatabase[matchedKey];
+      if (aiResCause) aiResCause.textContent = data.cause;
+      if (aiResSeverity) aiResSeverity.textContent = data.severity;
+      if (aiResTime) aiResTime.textContent = data.time;
+      if (aiResCost) aiResCost.textContent = data.cost;
+      if (aiResRecommendation) aiResRecommendation.textContent = data.rec;
+      if (aiResFeasibility) aiResFeasibility.textContent = data.feasibility;
+    }, 500);
+  }
+
+  if (aiPresetBtns.length > 0) {
+    aiPresetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const symptom = btn.dataset.symptom;
+        if (aiSymptomsText && symptom) {
+          aiSymptomsText.value = symptom;
+        }
+        aiPresetBtns.forEach(b => b.classList.remove('bg-indigo-100', 'text-indigo-700', 'border-indigo-300'));
+        btn.classList.add('bg-indigo-100', 'text-indigo-700', 'border-indigo-300');
+        runAiAnalysis(symptom || "");
+      });
+    });
+  }
+
+  if (btnAnalyzeAi) {
+    btnAnalyzeAi.addEventListener('click', () => {
+      const query = aiSymptomsText ? aiSymptomsText.value.trim() : "";
+      runAiAnalysis(query || "Laptop overheating");
     });
   }
 </script>
