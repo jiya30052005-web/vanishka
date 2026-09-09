@@ -360,498 +360,147 @@
 <!-- ==========================================
      STICKY GLASSMORPHISM NAVBAR (Exact Specs)
      ========================================== -->
-<header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 py-3">
-    <div class="flex items-center justify-between gap-4 lg:gap-6">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 sm:py-3">
+      <div class="flex items-center justify-between gap-4">
 
-      <!-- Mobile Menu Toggle Button -->
-      <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
 
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-2 shadow-md shadow-slate-900/30 group-hover:scale-105 transition-transform duration-200">
-          <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain filter drop-shadow" />
-        </div>
-        <div class="flex flex-col justify-center">
-          <span class="font-display font-extrabold text-lg sm:text-xl text-electric tracking-tight leading-none transition-colors">VANISHKA ENTERPRISES</span>
-          <div class="flex items-center justify-between text-[7.5px] sm:text-[8.5px] font-bold text-amber-600 uppercase tracking-wider w-full mt-0.5">
-            <span>COMPUTERS</span>
-            <span class="text-amber-500/70">•</span>
-            <span>LAPTOPS</span>
-            <span class="text-amber-500/70">•</span>
-            <span>HARDWARE</span>
-            <span class="text-amber-500/70">•</span>
-            <span>NETWORKING</span>
+        <!-- Brand Logo (Direct Cropped Full Logo) -->
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+          <img src="images/ve_badge_icon.png" alt="VE Logo" class="h-10 sm:h-11 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition" style="max-height: 46px;" />
+          <div class="flex flex-col justify-center text-left">
+            <span class="font-display font-black text-[#1d65ff] text-base sm:text-[17px] tracking-tight leading-none group-hover:text-blue-700 transition-colors">
+              VANISHKA ENTERPRISES
+            </span>
+            <span class="text-[9px] sm:text-[10px] font-extrabold text-[#d97706] tracking-wider uppercase leading-tight mt-1">
+              COMPUTERS • LAPTOPS • HARDWARE • NETWORKING
+            </span>
           </div>
-        </div>
-      </a>
-
-      <!-- Center Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-700">
-        <a href="index.html" class="px-3.5 py-2 rounded-lg bg-electric/10 text-electric font-extrabold transition">Home</a>
-        <a href="about-us.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">About Us</a>
-        <a href="our-products.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Products</a>
-        <a href="contact.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100 hover:text-navy-900 transition">Contact</a>
-      </nav>
-
-      <!-- Right Header Actions (Subtle Search Bar with Ctrl+K, Cart) -->
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        
-        <!-- Subtle Search Bar with Ctrl+K Badge -->
-        <div class="hidden md:flex items-center bg-slate-100/90 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-500 focus-within:bg-white focus-within:border-electric focus-within:ring-2 focus-within:ring-electric/20 transition-all w-48 xl:w-56 cursor-pointer" onclick="document.getElementById('search-input').focus();">
-          <svg class="w-4 h-4 text-slate-400 shrink-0 mr-2" viewBox="0 0 24 24" fill="none"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input id="search-input" type="text" placeholder="Search IT hardware..." class="bg-transparent w-full text-slate-800 placeholder-slate-400 outline-none text-xs" />
-          <kbd class="hidden xl:inline-block bg-white border border-slate-300 rounded px-1.5 py-0.5 text-[10px] font-semibold text-slate-400 shadow-2xs shrink-0">Ctrl+K</kbd>
-        </div>
-
-        <!-- Cart Icon with Item Count Badge -->
-        <a href="our-products.html" aria-label="Cart" class="relative p-2.5 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-electric transition group">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
-          <span class="absolute top-1 right-1 bg-electric text-white text-[10px] font-black min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center border-2 border-white shadow-xs">0</span>
         </a>
+
+        <!-- Center Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="px-4 py-2 rounded-xl transition bg-blue-50 text-blue-600 font-extrabold">Home</a>
+          <a href="about-us.html" class="px-4 py-2 rounded-xl transition hover:bg-slate-100 text-slate-700 font-semibold">About Us</a>
+          <a href="contact.html" class="px-4 py-2 rounded-xl transition hover:bg-slate-100 text-slate-700 font-semibold">Contact</a>
+        </nav>
+
+        <!-- Right Header Action Buttons: WhatsApp & Call Now -->
+        <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="bg-[#0b965c] hover:bg-[#097b4b] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+918600572488" class="bg-electric hover:bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <span>Call Now</span>
+          </a>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-  <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-slate-800 shadow-xl">
-    <div class="mb-3">
-      <input type="text" placeholder="Search laptops, printers, boards..." class="w-full bg-slate-100 text-sm text-slate-900 px-4 py-2 rounded-lg outline-none border border-slate-200 focus:border-electric" />
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2 text-slate-800 shadow-xl">
+      <a href="index.html" class="block px-3 py-2 rounded-md bg-electric/10 text-electric font-bold font-medium">Home</a>
+      <a href="about-us.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 text-slate-800 font-medium">About Us</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 text-slate-800 font-medium">Contact</a>
     </div>
-    <a href="index.html" class="block px-3 py-2 rounded-md bg-electric/10 text-electric font-bold">Home</a>
-    <a href="about-us.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">About Us</a>
-    <a href="our-products.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 font-medium">Products &amp; Laptops</a>
-  </div>
-</header>
+  </header>
 
 <!-- ==========================================
-     HERO SLIDER SECTION (Split 2-Column + Tech Mesh & Animated Blobs)
+     HERO SECTION (Expert Laptop & PC Repair At Your Doorstep)
      ========================================== -->
-<section class="relative tech-grid-pattern py-5 sm:py-7 overflow-hidden" id="hero-slider-section">
+<section class="relative tech-grid-pattern py-4 sm:py-6 overflow-hidden bg-slate-50/50">
 
-  <!-- Subtle Animated Ambient Gradient Blobs -->
-  <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-electric/25 via-cyan-400/20 to-purple-500/20 blur-3xl hero-blob-1 pointer-events-none -z-10"></div>
-  <div class="absolute -bottom-20 -right-20 w-[30rem] h-[30rem] rounded-full bg-gradient-to-br from-cyan-400/20 via-electric/20 to-indigo-600/20 blur-3xl hero-blob-2 pointer-events-none -z-10"></div>
+  <!-- Floating Ambient Blur Accents -->
+  <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-electric/15 via-cyan-400/15 to-purple-500/10 blur-3xl pointer-events-none -z-10"></div>
+  <div class="absolute -bottom-20 -right-20 w-[30rem] h-[30rem] rounded-full bg-gradient-to-br from-cyan-400/15 via-electric/15 to-indigo-600/10 blur-3xl pointer-events-none -z-10"></div>
 
   <div class="max-w-7xl mx-auto px-4 relative">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-    <!-- Slides Container -->
-    <div class="relative min-h-[420px] sm:min-h-[470px] flex items-center">
-
-      <!-- SLIDE 1 -->
-      <div class="hero-slide active-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <!-- Left Column -->
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-200/60 text-blue-700 text-[11px] font-bold tracking-wide mb-4 shadow-sm">
-            <span class="text-amber-500">⚡</span> Established in 2013 • Premium IT Repair Partner
-          </div>
-          <h1 class="hero-stagger-2 font-display font-black text-3xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.15]">
-            Expert Laptop &amp; PC Repair <span class="text-electric">At Your Doorstep</span>
-          </h1>
-          <p class="hero-stagger-3 mt-4 text-slate-600 font-medium text-sm sm:text-base max-w-xl leading-relaxed">
-            Fast and reliable repair services for Apple, Dell, HP &amp; Lenovo. We provide chip-level motherboard repairs, OS tuning, and data recovery with prompt on-site support.
-          </p>
-          <div class="hero-stagger-4 mt-5 flex flex-wrap items-center gap-3">
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-emerald-500 text-sm">🛡️</span> <span class="text-xs font-bold text-slate-700">90-Day Warranty</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-blue-500 text-sm">✔️</span> <span class="text-xs font-bold text-slate-700">OEM Spares</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-amber-500 text-sm">🔍</span> <span class="text-xs font-bold text-slate-700">No Fix - No Fee</span>
-            </div>
-          </div>
-          {buttons_html}
+      <!-- Left Column: Content -->
+      <div class="lg:col-span-7 z-10">
+        
+        <!-- Top Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/80 text-blue-700 text-xs font-bold tracking-wide mb-5 shadow-xs">
+          <span class="text-amber-500">⚡</span> Established in 2013 • Premium IT Repair Partner
         </div>
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/macbook_3d_hero_cutout_transparent.png" alt="Certified Refurbished Apple MacBook &amp; Enterprise Laptops" class="hero-product-image" />
 
-            <!-- Floating Glassmorphism Badges (Positioned cleanly to fit comfortably without right edge overflow) -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
+        <!-- Main Heading -->
+        <h1 class="font-display font-black text-2xl sm:text-4xl lg:text-[38px] text-slate-900 tracking-tight leading-[1.16]">
+          Expert Laptop &amp; PC Repair <span class="text-electric">At Your Doorstep</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-lg leading-relaxed">
+          Fast and reliable repair services for Apple, Dell, HP &amp; Lenovo. We provide chip-level motherboard repairs, OS tuning, and data recovery with prompt on-site support.
+        </p>
+
+        <!-- 3 Feature Chips -->
+        <div class="mt-3.5 flex flex-wrap items-center gap-2.5">
+          <div class="flex items-center gap-2 bg-white border border-slate-200/90 rounded-xl px-3.5 py-2.5 shadow-xs">
+            <span class="text-blue-500 text-sm">🛡️</span> 
+            <span class="text-xs font-bold text-slate-800">90-Day Warranty</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white border border-slate-200/90 rounded-xl px-3.5 py-2.5 shadow-xs">
+            <span class="text-purple-600 text-sm">✔️</span> 
+            <span class="text-xs font-bold text-slate-800">OEM Spares</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white border border-slate-200/90 rounded-xl px-3.5 py-2.5 shadow-xs">
+            <span class="text-cyan-600 text-sm">🔍</span> 
+            <span class="text-xs font-bold text-slate-800">No Fix - No Fee</span>
+          </div>
+        </div>
+
+        <!-- 3 Action CTA Buttons -->
+        <div class="mt-5 flex flex-wrap items-center gap-3">
+          <a href="contact.html" class="bg-electric hover:bg-blue-700 text-white px-4.5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
+            Book Doorstep Visit
+          </a>
+          <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20book%20a%20laptop/PC%20repair%20visit." target="_blank" class="bg-[#0b965c] hover:bg-[#097b4b] text-white px-4.5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-emerald-500/20 transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+            Instant WhatsApp Chat
+          </a>
+          <a href="contact.html" class="bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-700 px-4.5 py-2.5 rounded-xl font-bold text-xs shadow-xs transition-all flex items-center justify-center gap-2">
+            <span>View All Services</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual with MacBook Laptops & Floating Badges -->
+      <div class="lg:col-span-5 relative flex items-center justify-center py-2">
+        <div class="relative w-full max-w-lg">
+          
+          <!-- Floating Glassmorphism Badges (Positioned above laptops like in screenshot) -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-3 py-1.5 text-xs font-extrabold tracking-tight flex items-center gap-1.5">
               <span>⚡</span> <span>Core i5 / i7 &amp; Apple Silicon</span>
             </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
+            <div class="bg-white/90 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-3 py-1.5 text-xs font-extrabold tracking-tight flex items-center gap-1.5">
               <span>🛡️</span> <span>1-Year Full Warranty</span>
             </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>🔋</span> <span>50-Point Audit Passed</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>💻</span> <span>100% Genuine macOS / Win 11</span>
-            </div>
-
-          </div></div>
-      </div>
-
-      <!-- SLIDE 2 -->
-      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <!-- Left Column -->
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-200/60 text-blue-700 text-[11px] font-bold tracking-wide mb-4 shadow-sm">
-            <span class="text-purple-500">🖨️</span> Professional Printer Services
-          </div>
-          <h1 class="hero-stagger-2 font-display font-black text-3xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.15]">
-            Comprehensive Printer <span class="text-electric">Repair &amp; Maintenance</span>
-          </h1>
-          <p class="hero-stagger-3 mt-4 text-slate-600 font-medium text-sm sm:text-base max-w-xl leading-relaxed">
-            Expert servicing for Canon, HP, and Epson printers. We handle cartridge refilling, paper jam fixes, head cleaning, and network printer configuration.
-          </p>
-          <div class="hero-stagger-4 mt-5 flex flex-wrap items-center gap-3">
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-emerald-500 text-sm">💧</span> <span class="text-xs font-bold text-slate-700">Quick Refills</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-blue-500 text-sm">✔️</span> <span class="text-xs font-bold text-slate-700">OEM Parts</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-amber-500 text-sm">📶</span> <span class="text-xs font-bold text-slate-700">Network Setup</span>
-            </div>
-          </div>
-          {buttons_html}
-        </div>
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/macbook_3d_hero_cutout_transparent.png" alt="Certified Refurbished Apple MacBook &amp; Enterprise Laptops" class="hero-product-image" />
-
-            <!-- Floating Glassmorphism Badges (Positioned cleanly to fit comfortably without right edge overflow) -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
-              <span>⚡</span> <span>Core i5 / i7 &amp; Apple Silicon</span>
-            </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
-              <span>🛡️</span> <span>1-Year Full Warranty</span>
-            </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>🔋</span> <span>50-Point Audit Passed</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>💻</span> <span>100% Genuine macOS / Win 11</span>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SLIDE 2: Canon High-Efficiency Ink-Tank Printers -->
-      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 text-purple-600 text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
-            <span>🖨️ AUTHORIZED CANON PARTNER</span>
           </div>
 
-          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
-            SEAMLESS PRINTS<br />
-            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">LIMITLESS POSSIBILITIES</span>
-          </h1>
-
-          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
-            Canon High-Efficiency Ink-tank &amp; Heavy-Duty Laser Printers with Original Manufacturer Warranty and Ultra-Low Cost Per Page.
-          </p>
-
-          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>Ultra-Low Cost Printing (High Yield Bottles up to 7,700 Pages)</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>Original Canon Brand Warranty &amp; On-Site Service Setup</span>
-            </div>
-          </div>
-
-          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
-            
-            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">STARTING PRICE</span>
-              <span class="font-display font-black text-xl text-navy-900 leading-none mt-0.5">₹8,999/-</span>
-            </div>
-
-            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
-              <span>Explore Canon Lineup</span>
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-
-            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20an%20instant%20quote%20for%20Canon%20Printers." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs">
-              Instant Quote →
-            </a>
-
+          <!-- Cutout Product Image -->
+          <div class="relative flex items-center justify-center">
+            <img src="images/macbook_3d_hero_cutout.png" alt="Expert Laptop &amp; PC Repair Doorstep Service" class="w-full object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
           </div>
 
         </div>
-
-        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/canon_printers_transparent.png" alt="Canon High-Efficiency Ink-Tank Printer" class="hero-product-image" />
-
-            <!-- Floating Glassmorphism Badges -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
-              <span>🖨️</span> <span>Ultra-Low Cost / Page</span>
-            </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
-              <span>💧</span> <span>7,700 Pages Yield</span>
-            </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>⚡</span> <span>Canon Brand Warranty</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>📶</span> <span>Wireless Wi-Fi Print</span>
-            </div>
-
-          </div></div>
-      </div>
-
-      <!-- SLIDE 3 -->
-      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <!-- Left Column -->
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-200/60 text-blue-700 text-[11px] font-bold tracking-wide mb-4 shadow-sm">
-            <span class="text-rose-500">🎨</span> Smart Classroom &amp; AV Solutions
-          </div>
-          <h1 class="hero-stagger-2 font-display font-black text-3xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.15]">
-            Interactive Board <span class="text-electric">Installation &amp; Support</span>
-          </h1>
-          <p class="hero-stagger-3 mt-4 text-slate-600 font-medium text-sm sm:text-base max-w-xl leading-relaxed">
-            End-to-end setup and maintenance for interactive flat panels, projectors, and smart classroom equipment. Ideal for schools and corporate boardrooms.
-          </p>
-          <div class="hero-stagger-4 mt-5 flex flex-wrap items-center gap-3">
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-emerald-500 text-sm">🛠️</span> <span class="text-xs font-bold text-slate-700">On-site Install</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-blue-500 text-sm">🔌</span> <span class="text-xs font-bold text-slate-700">Cabling &amp; Setup</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 shadow-xs">
-              <span class="text-amber-500 text-sm">👨‍🏫</span> <span class="text-xs font-bold text-slate-700">Training Provided</span>
-            </div>
-          </div>
-          {buttons_html}
-        </div>
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/macbook_3d_hero_cutout_transparent.png" alt="Certified Refurbished Apple MacBook &amp; Enterprise Laptops" class="hero-product-image" />
-
-            <!-- Floating Glassmorphism Badges (Positioned cleanly to fit comfortably without right edge overflow) -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
-              <span>⚡</span> <span>Core i5 / i7 &amp; Apple Silicon</span>
-            </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
-              <span>🛡️</span> <span>1-Year Full Warranty</span>
-            </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>🔋</span> <span>50-Point Audit Passed</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>💻</span> <span>100% Genuine macOS / Win 11</span>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SLIDE 2: Canon High-Efficiency Ink-Tank Printers -->
-      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 text-purple-600 text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
-            <span>🖨️ AUTHORIZED CANON PARTNER</span>
-          </div>
-
-          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
-            SEAMLESS PRINTS<br />
-            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">LIMITLESS POSSIBILITIES</span>
-          </h1>
-
-          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
-            Canon High-Efficiency Ink-tank &amp; Heavy-Duty Laser Printers with Original Manufacturer Warranty and Ultra-Low Cost Per Page.
-          </p>
-
-          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>Ultra-Low Cost Printing (High Yield Bottles up to 7,700 Pages)</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>Original Canon Brand Warranty &amp; On-Site Service Setup</span>
-            </div>
-          </div>
-
-          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
-            
-            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">STARTING PRICE</span>
-              <span class="font-display font-black text-xl text-navy-900 leading-none mt-0.5">₹8,999/-</span>
-            </div>
-
-            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
-              <span>Explore Canon Lineup</span>
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-
-            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20an%20instant%20quote%20for%20Canon%20Printers." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs">
-              Instant Quote →
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/canon_printers_transparent.png" alt="Canon High-Efficiency Ink-Tank Printer" class="hero-product-image" />
-
-            <!-- Floating Glassmorphism Badges -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
-              <span>🖨️</span> <span>Ultra-Low Cost / Page</span>
-            </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
-              <span>💧</span> <span>7,700 Pages Yield</span>
-            </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>⚡</span> <span>Canon Brand Warranty</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>📶</span> <span>Wireless Wi-Fi Print</span>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SLIDE 3: AI Interactive Smart Boards & BenQ Displays -->
-      <div class="hero-slide absolute inset-0 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        
-        <div class="lg:col-span-7 hero-slide-text z-10">
-          
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 text-purple-600 text-[11px] font-black tracking-wider uppercase mb-3 shadow-xs">
-            <span>🎨 AI SMART CLASSROOMS &amp; BOARDROOMS</span>
-          </div>
-
-          <h1 class="hero-stagger-2 font-display font-black text-2xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.12]">
-            FUTURE OF CLASSROOMS<br />
-            <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-electric bg-clip-text text-transparent">&amp; DIGITAL BOARDROOMS</span>
-          </h1>
-
-          <p class="hero-stagger-3 mt-2.5 text-slate-600 font-medium text-xs sm:text-sm max-w-xl leading-relaxed">
-            BenQ, LG, Cybernetyx &amp; Logic 4K Interactive Displays (65", 75", 86") with Trolleys, Dual OS, and On-site Installation Support.
-          </p>
-
-          <div class="hero-stagger-4 mt-3.5 space-y-1.5 text-xs sm:text-sm font-semibold text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>4K Ultra HD Anti-Glare Touchscreens with Zero-Bonding Pen Precision</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</span>
-              <span>Free On-Site Demo &amp; Wholesale Institutional Pricing</span>
-            </div>
-          </div>
-
-          <div class="hero-stagger-5 mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
-            
-            <div class="bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">RATES</span>
-              <span class="font-display font-black text-lg text-navy-900 leading-none mt-0.5">Wholesale Best</span>
-            </div>
-
-            <a href="our-products.html" class="primary-hero-cta px-6 py-2.5 rounded-xl bg-gradient-to-r from-electric via-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md shadow-electric/25 flex items-center gap-2">
-              <span>Explore Smart Boards</span>
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-
-            <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20book%20a%20free%20demo%20for%20Digital%20Boards." target="_blank" class="px-5 py-2.5 rounded-xl bg-white text-navy-900 border border-slate-300 hover:bg-slate-100 font-bold text-xs uppercase tracking-wider transition-all shadow-2xs">
-              Book Free Demo →
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- Right Column (Clean Cutout PNG Floating with Soft Silhouette Drop Shadow, shifted towards text for proper structure & badge fit) -->
-        <div class="lg:col-span-5 hero-slide-visual relative flex items-center justify-center py-4 lg:-translate-x-10">
-          <div class="hero-product-image-container">
-            
-            <!-- Cutout Product Image with Soft Silhouette Shadow -->
-            <img src="images/digital_board_transparent.png" alt="AI Interactive Digital Smart Board" class="hero-product-image" />
-
-            <!-- Floating Glassmorphism Badges -->
-            <div class="absolute -top-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-1">
-              <span>⚡</span> <span>4K Ultra HD Display</span>
-            </div>
-
-            <div class="absolute -top-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-2">
-              <span>🖐️</span> <span>40-Point Multi-Touch</span>
-            </div>
-
-            <div class="absolute -bottom-3 left-0 sm:left-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-3">
-              <span>🖋️</span> <span>Zero-Latency Pen</span>
-            </div>
-
-            <div class="absolute -bottom-3 right-0 sm:right-1 z-20 bg-white/85 backdrop-blur-md border border-slate-200/90 text-navy-900 shadow-md shadow-slate-900/5 rounded-xl px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] font-extrabold tracking-tight flex items-center gap-1.5 spatial-chip spatial-chip-4">
-              <span>🌐</span> <span>Wireless Casting</span>
-            </div>
-
-          </div></div>
       </div>
 
     </div>
-
-    <!-- Sleek Slide Navigation Indicators & Controls -->
-    <div class="flex items-center justify-between mt-4 pt-2 border-t border-slate-200/60">
-      <div class="flex items-center gap-2" id="hero-dots-container">
-        <button class="hero-dot w-8 h-2.5 rounded-full bg-electric transition-all duration-300 cursor-pointer shadow-xs" aria-label="Slide 1" aria-current="true"></button>
-        <button class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-electric/60 transition-all duration-300 cursor-pointer" aria-label="Slide 2"></button>
-        <button class="hero-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-electric/60 transition-all duration-300 cursor-pointer" aria-label="Slide 3"></button>
-      </div>
-      <div class="flex items-center gap-2">
-        <button id="hero-prev-btn" aria-label="Previous slide" class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-700 hover:bg-electric hover:text-white hover:border-electric transition-all">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button id="hero-next-btn" aria-label="Next slide" class="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-700 hover:bg-electric hover:text-white hover:border-electric transition-all">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </div>
-
   </div>
 </section>
+
 <!-- ==========================================
      TRUST BANNER BELOW HERO (Exact Specs: Stats + Brand Logo Slider)
      ========================================== -->
@@ -1057,7 +706,7 @@
           </svg>
         </div>
         <h3 class="font-display font-bold text-base text-navy-900 leading-snug">Book Doorstep or Workshop</h3>
-        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Call or book online. Our technician arrives at your home/office in Nagpur within 30-45 minutes or visit our Jagnath Budhawari center.</p>
+        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Call or book online. Our technician arrives at your home/office in Nagpur within 30-45 minutes or visit our Jaripatka center.</p>
       </div>
       <div class="mt-6 pt-3.5 border-t border-slate-100 flex items-center justify-between">
         <span class="text-xs font-bold text-electric">Guaranteed Quality</span>
@@ -1157,7 +806,7 @@
           Chip-Level Motherboard Repair &amp; Advanced Hardware Solutions
         </h2>
         <p class="text-slate-300 text-xs sm:text-sm mt-2 font-medium leading-relaxed">
-          Equipped with modern BGA rework stations and cleanroom data recovery tools at our Jagnath Budhawari workshop in Nagpur.
+          Equipped with modern BGA rework stations and cleanroom data recovery tools at our Jaripatka workshop in Nagpur.
         </p>
       </div>
 
@@ -1238,19 +887,19 @@
       Our IT Repair &amp; Support Services
     </h2>
     <p class="text-slate-600 text-sm max-w-xl mx-auto mt-2 leading-relaxed font-normal">
-      No hidden fees. Sharon Infotech delivers certified technician doorstep repairs in Nagpur with upfront pricing and genuine spare parts.
+      Certified technician doorstep repairs in Nagpur with transparent service and genuine spare parts from Vanishka Enterprises.
     </p>
 
     <!-- Catalog CTA Link -->
     <div class="mt-4">
-      <a href="our-products.html" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 font-bold text-xs transition-all shadow-2xs">
+      <a href="contact.html" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200/80 font-bold text-xs transition-all shadow-2xs">
         <span>Explore Full Dedicated Services Catalog</span>
         <span>→</span>
       </a>
     </div>
   </div>
 
-  <!-- Services Grid (17 Cards with Checkmarks & Dual Buttons) -->
+  <!-- Services Grid (Top 5 Core Cards with Dual Buttons & No Pricing) -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- Card 1: Laptop Repair (MOST BOOKED IN NAGPUR) -->
@@ -1266,22 +915,15 @@
           </span>
         </div>
 
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Laptop Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹299</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
+        <div class="mb-2">
+          <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Laptop Repair</h3>
+          <div class="flex items-center gap-2 mt-1 text-xs">
+            <span class="text-slate-500 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>30-45 mins</span>
+            </span>
+            <span class="text-slate-300">•</span>
+            <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
           </div>
         </div>
 
@@ -1316,13 +958,13 @@
           <span>Book Visit</span>
           <span>→</span>
         </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
+        <a href="contact.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
           Full Details
         </a>
       </div>
     </div>
 
-    <!-- Card 2: Notebooks Repair -->
+    <!-- Card 2: Computer & Desktop Repair -->
     <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between mb-4">
@@ -1332,159 +974,20 @@
           </span>
         </div>
 
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Notebooks Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹299</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
+        <div class="mb-2">
+          <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Computer &amp; Desktop Repair</h3>
+          <div class="flex items-center gap-2 mt-1 text-xs">
+            <span class="text-slate-500 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>30-45 mins</span>
+            </span>
+            <span class="text-slate-300">•</span>
+            <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
           </div>
         </div>
 
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Slim notebook, ultrabook &amp; Chromebook hardware repair. Battery replacement, ultra-thin display repair, trackpad fix &amp; overheating solution.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Ultrabook &amp; Chromebook screen replacement</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Type-C charging port &amp; battery swap</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Slim hinge &amp; body fabrication</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Overheating fan repair</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 3: All-In-One PC Repair -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">All-In-One PC Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>45-60 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹499</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Specialized on-site repair for HP Pavilion/Envy AIO, Dell Inspiron AIO, Lenovo IdeaCentre AIO, and Apple iMac desktop computers in Nagpur.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>AIO display glass &amp; panel fix</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>In-built power supply &amp; motherboard fix</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>NVMe SSD &amp; RAM speed boost</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Cooling fan cleaning &amp; repair</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 4: Computer Repair -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Computer Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹299</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Complete diagnostic and on-site repair for desktop computers, gaming rigs, and office workstations across Nagpur.
+          Complete diagnostic and on-site repair for desktop computers, All-In-One PCs, gaming rigs, and office workstations across Nagpur.
         </p>
 
         <!-- 4 Bullet Items -->
@@ -1514,13 +1017,13 @@
           <span>Book Visit</span>
           <span>→</span>
         </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
+        <a href="contact.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
           Full Details
         </a>
       </div>
     </div>
 
-    <!-- Card 5: MacBook Repair -->
+    <!-- Card 3: MacBook Repair -->
     <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between mb-4">
@@ -1530,22 +1033,15 @@
           </span>
         </div>
 
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">MacBook Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>60-90 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹999</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
+        <div class="mb-2">
+          <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">MacBook Repair</h3>
+          <div class="flex items-center gap-2 mt-1 text-xs">
+            <span class="text-slate-500 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>60-90 mins</span>
+            </span>
+            <span class="text-slate-300">•</span>
+            <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
           </div>
         </div>
 
@@ -1580,13 +1076,13 @@
           <span>Book Visit</span>
           <span>→</span>
         </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
+        <a href="contact.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
           Full Details
         </a>
       </div>
     </div>
 
-    <!-- Card 6: Multibrand Hardware Support -->
+    <!-- Card 4: Printer Repair -->
     <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between mb-4">
@@ -1596,88 +1092,15 @@
           </span>
         </div>
 
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Multibrand Hardware Support</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: Up to 6 Months Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹299</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Official-grade hardware diagnosis and genuine spare parts replacement for Dell, HP, Lenovo, Asus, Acer, Apple, MSI &amp; Brother.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Dell, HP, Lenovo, Asus &amp; Acer support</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>100% OEM certified original parts</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Component-level hardware diagnosis</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>90-Day written warranty card</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 7: Printer Repair -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Printer Repair</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>45-60 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹399</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
+        <div class="mb-2">
+          <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Printer Repair</h3>
+          <div class="flex items-center gap-2 mt-1 text-xs">
+            <span class="text-slate-500 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>45-60 mins</span>
+            </span>
+            <span class="text-slate-300">•</span>
+            <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
           </div>
         </div>
 
@@ -1712,13 +1135,13 @@
           <span>Book Visit</span>
           <span>→</span>
         </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
+        <a href="contact.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
           Full Details
         </a>
       </div>
     </div>
 
-    <!-- Card 8: Cartridge Refill -->
+    <!-- Card 5: Computer Networking -->
     <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between mb-4">
@@ -1728,220 +1151,15 @@
           </span>
         </div>
 
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Cartridge Refill</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>20-30 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 30 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹199</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Quick laser toner cartridge refilling and InkTank refilling with high-density premium imported black &amp; color ink/toner powder in Nagpur.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>High-density imported black &amp; color toner</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Drum cleaning &amp; blade replacement</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Instant 20-min refilling service</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Zero streak clean print output</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 9: CCTV Installation -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">CCTV Installation</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>60-120 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 1 Year Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹799</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Professional CCTV camera setup for homes, shops, offices, and warehouses across Nagpur. HD IP cameras, DVR/NVR setup, wiring &amp; smartphone live view.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>HD IP &amp; Analog camera mounting</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>DVR / NVR setup &amp; hard drive install</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Structured cabling &amp; conduit fitting</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Mobile app live remote view setup</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 10: Surveillance Maintenance -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Surveillance Maintenance</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>45-60 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹499</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Periodic CCTV health audit, BNC/DC connector replacement, camera lens cleaning, DVR hard disk replacement, and offline connection troubleshooting.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Camera lens cleaning &amp; focus alignment</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>BNC/DC connector &amp; power adapter fix</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>DVR hard disk health audit</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Offline camera network restore</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 11: Computer Networking -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Computer Networking</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>60-120 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 1 Year Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹999</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
+        <div class="mb-2">
+          <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Computer Networking</h3>
+          <div class="flex items-center gap-2 mt-1 text-xs">
+            <span class="text-slate-500 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>60-120 mins</span>
+            </span>
+            <span class="text-slate-300">•</span>
+            <span class="text-emerald-600 font-semibold">Warranty: 1 Year Warranty</span>
           </div>
         </div>
 
@@ -1976,403 +1194,7 @@
           <span>Book Visit</span>
           <span>→</span>
         </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 12: LAN / Wi-Fi Service -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">LAN / Wi-Fi Service</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹399</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Eliminate Wi-Fi dead zones, fix slow speeds, configure Dual-Band Wi-Fi 6 Routers, Mesh Extenders, and repair broken RJ45 LAN points.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Wi-Fi dead zone elimination &amp; mesh setup</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Dual-band Wi-Fi 6 router configuration</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>RJ45 crimping &amp; LAN socket repair</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Speed optimization &amp; ISP troubleshooting</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 13: Server Setup -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Server Setup</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>120-180 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 1 Year Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹1,999</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Windows Server &amp; Linux Server deployment, NAS Network Storage setup, domain user management, centralized data backup, and Active Directory.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Windows &amp; Linux Server installation</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Active Directory &amp; Domain Controller</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>NAS network storage &amp; RAID array</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Automated off-site cloud data backup</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 14: Cleanroom Data Recovery -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Cleanroom Data Recovery</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>60-120 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 100% Confidential</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹1,499</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Cleanroom data recovery for damaged HDDs, dead SSDs, accidental format, virus corruption, and encrypted ransomware storage drives in Nagpur.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Crashed HDD &amp; dead SSD file extraction</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Formatted partition &amp; OS crash recovery</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Class 100 cleanroom mechanical recovery</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>100% strict NDA data confidentiality</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 15: Laptop Service -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Laptop Service</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹499</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Comprehensive laptop servicing including internal heatsink cleaning, Arctic MX-4 thermal paste re-application, fan lubrication, and speed boost.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Internal heatsink &amp; fan dust blowing</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Arctic MX-4 thermal paste re-application</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Hinge lubrication &amp; tightening</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>System speed optimization &amp; temp drop</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 16: Computer Service -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">Computer Service</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 90 Days Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹399</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Thorough servicing for desktop PCs. Anti-static dust blowing, cable routing, drive health check, and system speed optimization.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Full tower cabinet anti-static cleaning</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>RAM gold contact cleaning &amp; test</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Cable routing &amp; airflow improvement</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Startup item cleanup &amp; virus scan</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
-          Full Details
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 17: SSD High-Speed Upgrade -->
-    <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c1633] text-white text-[11px] font-bold">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span>Nagpur Certified</span>
-          </span>
-        </div>
-
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <div>
-            <h3 class="font-display font-bold text-xl text-slate-900 leading-snug">SSD High-Speed Upgrade</h3>
-            <div class="flex items-center gap-2 mt-1 text-xs">
-              <span class="text-slate-500 flex items-center gap-1">
-                <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>30-45 mins</span>
-              </span>
-              <span class="text-slate-300">•</span>
-              <span class="text-emerald-600 font-semibold">Warranty: 3 Years Warranty</span>
-            </div>
-          </div>
-          <div class="text-right shrink-0">
-            <span class="font-display font-black text-2xl text-slate-900 leading-none">₹350</span>
-            <span class="font-bold text-slate-900 text-sm block">onwards</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Clear Invoice</span>
-          </div>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
-          Upgrade slow laptops with high speed NVMe M.2 SSD and DDR4/DDR5 RAM with zero data loss OS cloning. 10x faster boot times guaranteed.
-        </p>
-
-        <!-- 4 Bullet Items -->
-        <div class="space-y-2 my-4 pt-3 border-t border-slate-100 text-xs text-slate-700 font-medium">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>Ultra-fast M.2 NVMe SSD installation</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>DDR4 / DDR5 RAM expansion</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>1-to-1 exact OS &amp; file cloning</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>10x faster boot time guarantee</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Buttons Row -->
-      <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
-        <a href="contact.html" class="flex-1 py-2.5 px-4 rounded-xl bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20">
-          <span>Book Visit</span>
-          <span>→</span>
-        </a>
-        <a href="our-products.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
+        <a href="contact.html" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm text-center transition">
           Full Details
         </a>
       </div>
@@ -2564,166 +1386,6 @@
 </section>
 
 <!-- ==========================================
-     GEMINI AI POWERED DIAGNOSTIC TOOL - SYMPTOM CHECKER
-     ========================================== -->
-<section class="max-w-7xl mx-auto px-4 py-12 sm:py-16 border-t border-slate-100">
-  <!-- Section Header -->
-  <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-    <div class="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-3">
-      <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-      <span>GEMINI AI POWERED DIAGNOSTIC TOOL</span>
-    </div>
-    <h2 class="font-display font-black text-3xl sm:text-4xl text-slate-900 tracking-tight">
-      Free AI Laptop &amp; PC Symptom Checker
-    </h2>
-    <p class="text-slate-600 text-sm max-w-xl mx-auto mt-2 leading-relaxed font-normal">
-      Describe your computer issue in plain English. Our AI system will analyze the symptoms, estimate repair costs, and advise doorstep feasibility in Nagpur.
-    </p>
-  </div>
-
-  <!-- Main Diagnostic Container -->
-  <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-    
-    <!-- Left Column: Input Form & Presets (6 Cols) -->
-    <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
-      
-      <!-- Top Row: Device Type & Brand/Model -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="ai-device-type" class="block text-xs font-bold text-slate-700 mb-2">Device Type</label>
-          <div class="relative">
-            <select id="ai-device-type" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold focus:outline-none focus:border-indigo-500 transition appearance-none cursor-pointer">
-              <option value="Laptop">Laptop</option>
-              <option value="Desktop PC">Desktop PC</option>
-              <option value="MacBook / iMac">MacBook / iMac</option>
-              <option value="Networking">Networking</option>
-            </select>
-            <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <label for="ai-brand-model" class="block text-xs font-bold text-slate-700 mb-2">Brand / Model</label>
-          <input type="text" id="ai-brand-model" placeholder="Dell / HP / Lenovo" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-medium focus:outline-none focus:border-indigo-500 transition placeholder:text-slate-400" />
-        </div>
-      </div>
-
-      <!-- Symptoms Textarea -->
-      <div>
-        <label for="ai-symptoms-text" class="block text-xs font-bold text-slate-700 mb-2">Describe the Symptoms / Problem</label>
-        <textarea id="ai-symptoms-text" rows="4" placeholder="e.g. Laptop gets very hot on bottom, fan makes loud buzzing noise, then shuts down automatically while working..." class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-2xl p-4 text-xs sm:text-sm font-normal focus:outline-none focus:border-indigo-500 transition resize-none placeholder:text-slate-400"></textarea>
-      </div>
-
-      <!-- Presets List -->
-      <div>
-        <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
-          OR CLICK A COMMON SYMPTOM PRESET:
-        </label>
-        <div class="flex flex-wrap gap-2" id="ai-presets-container">
-          <button type="button" data-symptom="Laptop overheating & turning off after 10 minutes" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Laptop overheating &amp; turning off after 10 minutes
-          </button>
-          <button type="button" data-symptom="Windows Blue Screen (BSOD) during boot" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Windows Blue Screen (BSOD) during boot
-          </button>
-          <button type="button" data-symptom="Hard drive making clicking noise & missing files" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Hard drive making clicking noise &amp; missing files
-          </button>
-          <button type="button" data-symptom="Display screen flickering with horizontal lines" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Display screen flickering with horizontal lines
-          </button>
-          <button type="button" data-symptom="Power LED turns on but screen stays completely black" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Power LED turns on but screen stays completely black
-          </button>
-          <button type="button" data-symptom="Wi-Fi icon missing & network cable unplugged error" class="ai-preset-btn bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-200/80 rounded-full px-3 py-1.5 text-xs text-slate-600 font-medium transition cursor-pointer text-left">
-            + Wi-Fi icon missing &amp; network cable unplugged error
-          </button>
-        </div>
-      </div>
-
-      <!-- Action Button -->
-      <button type="button" id="btn-analyze-ai" class="w-full py-3.5 px-6 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white font-extrabold text-sm sm:text-base text-center transition shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2 cursor-pointer">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-        <span>Analyze Symptoms with Gemini AI</span>
-      </button>
-
-    </div>
-
-    <!-- Right Column: AI Assistant Output Box (6 Cols) -->
-    <div class="lg:col-span-6 bg-slate-50/60 border border-slate-200/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-center items-center min-h-[380px] text-center relative overflow-hidden" id="ai-output-panel">
-      
-      <!-- Initial Ready State -->
-      <div id="ai-state-ready" class="space-y-4 max-w-sm mx-auto">
-        <div class="w-14 h-14 bg-indigo-100/90 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs">
-          <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-        </div>
-        <h3 class="font-display font-bold text-lg text-slate-900">AI Assistant Ready</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Type your computer problem on the left or click a preset to receive an instant diagnostic breakdown and Nagpur repair cost range.
-        </p>
-      </div>
-
-      <!-- Loading State (hidden initially) -->
-      <div id="ai-state-loading" class="hidden space-y-4 max-w-sm mx-auto">
-        <div class="w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mx-auto"></div>
-        <h3 class="font-display font-bold text-base text-slate-800">Analyzing Symptoms with Gemini AI...</h3>
-        <p class="text-xs text-slate-500">Checking diagnostic parameters &amp; Nagpur doorstep technician pricing...</p>
-      </div>
-
-      <!-- Analyzed Result State (hidden initially) -->
-      <div id="ai-state-result" class="hidden w-full text-left space-y-5">
-        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-indigo-600 uppercase tracking-wider">
-            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            AI DIAGNOSTIC ANALYSIS REPORT
-          </span>
-          <span class="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full" id="ai-res-feasibility">
-            100% Doorstep Ready
-          </span>
-        </div>
-
-        <div class="space-y-3">
-          <div>
-            <span class="text-xs font-semibold text-slate-400 block">Likely Primary Cause:</span>
-            <span class="text-sm font-bold text-slate-900 block mt-0.5" id="ai-res-cause">Thermal Paste Degradation &amp; Fan Dust Clogging</span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3 pt-1">
-            <div class="bg-white p-3 rounded-xl border border-slate-200/70">
-              <span class="text-[11px] font-medium text-slate-400 block">Severity Level</span>
-              <span class="text-xs font-bold text-amber-600 block mt-0.5" id="ai-res-severity">Medium (Requires Attention)</span>
-            </div>
-            <div class="bg-white p-3 rounded-xl border border-slate-200/70">
-              <span class="text-[11px] font-medium text-slate-400 block">Est. Doorstep Time</span>
-              <span class="text-xs font-bold text-slate-800 block mt-0.5" id="ai-res-time">30 - 45 Mins</span>
-            </div>
-          </div>
-
-          <div class="bg-indigo-50/80 border border-indigo-100 rounded-2xl p-4">
-            <span class="text-xs font-semibold text-indigo-900 block">Estimated Repair Cost in Nagpur:</span>
-            <span class="font-display font-black text-2xl text-indigo-600 block mt-0.5" id="ai-res-cost">₹399 - ₹699</span>
-            <p class="text-[11px] text-indigo-700/80 mt-1 leading-snug" id="ai-res-recommendation">
-              Includes thermal paste replacement, heatsink fan cleaning &amp; performance optimization.
-            </p>
-          </div>
-        </div>
-
-        <div class="pt-2">
-          <a href="contact.html" class="w-full py-3 px-5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm text-center transition flex items-center justify-center gap-2 shadow-md shadow-indigo-600/20">
-            <span>Book Doorstep Technician for this Issue</span>
-            <span>→</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ==========================================
      FOOTER
      ========================================== -->
 <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
@@ -2747,8 +1409,8 @@
         <ul class="space-y-2.5 text-xs">
           <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
           <li><a href="about-us.html" class="hover:text-cyan-400 transition">About Us</a></li>
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
           <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a></li>
         </ul>
       </div>
@@ -2766,10 +1428,10 @@
       <div>
         <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
         <ul class="space-y-2.5 text-xs">
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
-          <li><a href="our-products.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
+          <li><a href="contact.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
         </ul>
       </div>
 
@@ -2778,11 +1440,11 @@
         <ul class="space-y-2.5 text-xs">
           <li class="flex items-start gap-2">
             <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"/></svg>
-            <span>Tech Hub Street, Pune / MH 411001</span>
+            <span>Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, Nagpur</span>
           </li>
           <li class="flex items-center gap-2">
             <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
-            <span class="font-bold text-white">(+91) 86005 72488</span>
+            <span class="font-bold text-white">(+91) 8600572488 / 7875165423</span>
           </li>
         </ul>
       </div>
@@ -2957,129 +1619,7 @@
     });
   }
 
-  // Gemini AI Symptom Checker Interactive Handler
-  const aiPresetBtns = document.querySelectorAll('.ai-preset-btn');
-  const aiSymptomsText = document.getElementById('ai-symptoms-text');
-  const btnAnalyzeAi = document.getElementById('btn-analyze-ai');
-  const aiStateReady = document.getElementById('ai-state-ready');
-  const aiStateLoading = document.getElementById('ai-state-loading');
-  const aiStateResult = document.getElementById('ai-state-result');
-
-  const aiResCause = document.getElementById('ai-res-cause');
-  const aiResSeverity = document.getElementById('ai-res-severity');
-  const aiResTime = document.getElementById('ai-res-time');
-  const aiResCost = document.getElementById('ai-res-cost');
-  const aiResRecommendation = document.getElementById('ai-res-recommendation');
-  const aiResFeasibility = document.getElementById('ai-res-feasibility');
-
-  const symptomDatabase = {
-    "overheating": {
-      cause: "Thermal Paste Degradation & Fan Dust Clogging",
-      severity: "Medium (Requires Attention)",
-      time: "30 - 45 Mins",
-      cost: "₹399 - ₹699",
-      rec: "Includes thermal paste replacement, heatsink fan cleaning & performance optimization.",
-      feasibility: "100% Doorstep Ready"
-    },
-    "bsod": {
-      cause: "Corrupted OS System Files or RAM Fault",
-      severity: "Medium",
-      time: "45 - 60 Mins",
-      cost: "₹499 - ₹649",
-      rec: "Includes OS repair/reinstallation, system file recovery & diagnostic check.",
-      feasibility: "100% Doorstep Ready"
-    },
-    "clicking": {
-      cause: "HDD Mechanical Failure / Bad Sectors",
-      severity: "High (Critical Data Risk)",
-      time: "60 - 120 Mins",
-      cost: "₹1,499 - ₹3,999",
-      rec: "Includes cleanroom data extraction, bad sector repair & SSD clone options.",
-      feasibility: "Pickup & Doorstep Available"
-    },
-    "flickering": {
-      cause: "Display Ribbon Cable Loose or IPS Panel Damage",
-      severity: "Medium to High",
-      time: "30 - 60 Mins",
-      cost: "₹2,499 - ₹4,500",
-      rec: "Includes display panel inspection, ribbon connector fix or FHD screen replacement.",
-      feasibility: "100% Doorstep Ready"
-    },
-    "black": {
-      cause: "Motherboard Power IC or RAM Contact Oxide",
-      severity: "High",
-      time: "45 - 90 Mins",
-      cost: "₹599 - ₹1,299",
-      rec: "Includes motherboard power testing, RAM socket cleaning & chip diagnostics.",
-      feasibility: "100% Doorstep Ready"
-    },
-    "wifi": {
-      cause: "Wi-Fi Card Driver Conflict or Antenna Disconnect",
-      severity: "Low",
-      time: "20 - 30 Mins",
-      cost: "₹399 - ₹599",
-      rec: "Includes network driver update, WLAN card testing & LAN port repair.",
-      feasibility: "100% Doorstep Ready"
-    }
-  };
-
-  function runAiAnalysis(text) {
-    if (!aiStateReady || !aiStateLoading || !aiStateResult) return;
-    
-    aiStateReady.classList.add('hidden');
-    aiStateResult.classList.add('hidden');
-    aiStateLoading.classList.remove('hidden');
-
-    setTimeout(() => {
-      aiStateLoading.classList.add('hidden');
-      aiStateResult.classList.remove('hidden');
-
-      const lower = text.toLowerCase();
-      let matchedKey = "overheating";
-
-      if (lower.includes("bsod") || lower.includes("blue screen") || lower.includes("boot")) {
-        matchedKey = "bsod";
-      } else if (lower.includes("clicking") || lower.includes("hard drive") || lower.includes("missing files")) {
-        matchedKey = "clicking";
-      } else if (lower.includes("flickering") || lower.includes("lines") || lower.includes("display")) {
-        matchedKey = "flickering";
-      } else if (lower.includes("black") || lower.includes("power led") || lower.includes("won't turn on")) {
-        matchedKey = "black";
-      } else if (lower.includes("wi-fi") || lower.includes("network") || lower.includes("unplugged")) {
-        matchedKey = "wifi";
-      }
-
-      const data = symptomDatabase[matchedKey];
-      if (aiResCause) aiResCause.textContent = data.cause;
-      if (aiResSeverity) aiResSeverity.textContent = data.severity;
-      if (aiResTime) aiResTime.textContent = data.time;
-      if (aiResCost) aiResCost.textContent = data.cost;
-      if (aiResRecommendation) aiResRecommendation.textContent = data.rec;
-      if (aiResFeasibility) aiResFeasibility.textContent = data.feasibility;
-    }, 500);
-  }
-
-  if (aiPresetBtns.length > 0) {
-    aiPresetBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const symptom = btn.dataset.symptom;
-        if (aiSymptomsText && symptom) {
-          aiSymptomsText.value = symptom;
-        }
-        aiPresetBtns.forEach(b => b.classList.remove('bg-indigo-100', 'text-indigo-700', 'border-indigo-300'));
-        btn.classList.add('bg-indigo-100', 'text-indigo-700', 'border-indigo-300');
-        runAiAnalysis(symptom || "");
-      });
-    });
-  }
-
-  if (btnAnalyzeAi) {
-    btnAnalyzeAi.addEventListener('click', () => {
-      const query = aiSymptomsText ? aiSymptomsText.value.trim() : "";
-      runAiAnalysis(query || "Laptop overheating");
-    });
-  }
-</script>
+  </script>
 
 </body>
 </html>
