@@ -1,12 +1,574 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=../contact.html">
-  <script>window.location.replace("../contact.html");</script>
-  <title>Redirecting to Contact...</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us — Vanishka Enterprises | Computers, Laptops &amp; Networking</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:     { DEFAULT: '#0F172A', 50: '#F8FAFC', 100: '#F1F5F9', 800: '#1E293B', 900: '#0F172A', 950: '#020617' },
+          electric: { DEFAULT: '#2563EB', light: '#3B82F6', dark: '#1D4ED8' },
+          cyan:     { DEFAULT: '#06B6D4', light: '#22D3EE', dark: '#0891B2' },
+          sale:     '#E41E3F',
+          fb:       { DEFAULT: '#0F4C81', dark: '#0B3A63', darker: '#072642', tint: '#F0F7FF' },
+          ink:      '#1C2B33',
+          wa:       { DEFAULT: '#25D366', dark: '#1EBE5A', light: '#DCF8C6' }
+        },
+        fontFamily: {
+          display: ['Poppins', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; color: #0F172A; background-color: #F8FAFC; overflow-x: hidden; }
+  h1,h2,h3,.brand-font { font-family: 'Poppins', sans-serif; }
+  ::selection { background: #2563EB; color: #fff; }
+
+  /* ===================================================
+     3D GLASS PRISM NAVBAR EFFECT (Original Crisp White + 3D Prismatic Refraction)
+     =================================================== */
+  .prism-glass-header {
+    background: #FFFFFF;
+    box-shadow: 
+      0 4px 20px -2px rgba(15, 23, 42, 0.05),
+      0 1px 0 rgba(255, 255, 255, 1) inset;
+    position: relative;
+  }
+
+  /* Prismatic 3D Refraction Light Beam (Chromatic Dispersion Border) */
+  .prism-spectral-beam {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.5px;
+    background: linear-gradient(90deg, 
+      rgba(37, 99, 235, 0.9) 0%, 
+      rgba(6, 182, 212, 0.95) 20%, 
+      rgba(139, 92, 246, 0.85) 40%, 
+      rgba(236, 72, 153, 0.8) 60%, 
+      rgba(245, 158, 11, 0.85) 80%, 
+      rgba(37, 99, 235, 0.9) 100%
+    );
+    background-size: 300% 100%;
+    animation: prismSpectralFlow 8s linear infinite;
+    box-shadow: 0 1px 8px rgba(6, 182, 212, 0.4);
+  }
+
+  @keyframes prismSpectralFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* 3D Navigation Links - Clean Original Style with Subtle Depth */
+  .prism-nav-dock {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .prism-nav-item {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+  .prism-nav-item:hover {
+    transform: translateY(-1px);
+    color: #1d65ff;
+    background: #F0F6FF;
+  }
+  .prism-nav-item.active {
+    background: #EFF6FF;
+    color: #1d65ff;
+    font-weight: 800;
+    box-shadow: 0 2px 8px rgba(29, 101, 255, 0.12);
+    border: 1px solid #DBEAFE;
+  }
+
+  /* 3D Tactile Buttons with Specular Highlights */
+  .prism-btn-whatsapp {
+    background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+    box-shadow: 
+      0 4px 14px -2px rgba(16, 185, 129, 0.45), 
+      inset 0 1px 1px rgba(255, 255, 255, 0.45),
+      inset 0 -1px 1px rgba(4, 120, 87, 0.6);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .prism-btn-whatsapp:hover {
+    transform: translateY(-1.5px) scale(1.02);
+    box-shadow: 
+      0 8px 22px -3px rgba(16, 185, 129, 0.55), 
+      inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  }
+
+  .prism-btn-call {
+    background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 100%);
+    box-shadow: 
+      0 4px 14px -2px rgba(37, 99, 235, 0.45), 
+      inset 0 1px 1px rgba(255, 255, 255, 0.45),
+      inset 0 -1px 1px rgba(29, 78, 216, 0.6);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .prism-btn-call:hover {
+    transform: translateY(-1.5px) scale(1.02);
+    box-shadow: 
+      0 8px 22px -3px rgba(37, 99, 235, 0.55), 
+      inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  }
+
+  /* 3D Glass Logo Capsule */
+  .prism-logo-capsule {
+    perspective: 800px;
+    transform-style: preserve-3d;
+  }
+  .prism-logo-capsule:hover img {
+    transform: rotateY(-8deg) rotateX(4deg) scale(1.05);
+    filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.28));
+  }
+  .prism-logo-capsule img {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+  }
+
+  .glass-header {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+</style>
 </head>
-<body>
-  <p>Redirecting to <a href="../contact.html">Contact Us</a>...</p>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between">
+
+  <!-- ==========================================
+       3D GLASS PRISM NAVBAR (Premium Frosted Glass + Spectral Prism Refraction)
+       ========================================== -->
+  <header class="sticky top-0 z-50 prism-glass-header transition-all duration-300">
+    <!-- Prismatic Spectral Light Beam at bottom -->
+    <div class="prism-spectral-beam"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5">
+      <div class="flex items-center justify-between gap-3 sm:gap-4">
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-slate-800 p-2 rounded-xl hover:bg-slate-100/80 transition border border-slate-200/60 shadow-xs">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <!-- Brand Logo (Original Vibrant Colors + 3D Depth) -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 shrink-0 group prism-logo-capsule">
+          <img src="images/ve_badge_icon.png" alt="VE Logo" class="h-9 sm:h-11 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" style="max-height: 46px;" />
+          <div class="flex flex-col justify-center text-left">
+            <span class="font-display font-black text-[#1d65ff] text-xs sm:text-base md:text-[17px] tracking-tight leading-none group-hover:text-blue-700 transition-colors whitespace-nowrap">
+              VANISHKA ENTERPRISES
+            </span>
+            <span class="hidden sm:block text-[9px] sm:text-[10px] font-extrabold text-[#d97706] tracking-wider uppercase leading-tight mt-1">
+              COMPUTERS • LAPTOPS • HARDWARE • NETWORKING
+            </span>
+          </div>
+        </a>
+
+        <!-- Center Desktop Navigation: Original Clean Links with 3D Active Pill -->
+        <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2 text-sm font-semibold">
+          <a href="index.html" class="prism-nav-item px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-blue-600">Home</a>
+          <a href="about-us.html" class="prism-nav-item px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-blue-600">About Us</a>
+          <a href="contact.html" class="prism-nav-item active px-4 py-2 rounded-xl text-sm font-extrabold">Contact</a>
+        </nav>
+
+        <!-- Right Action Buttons: Tactile 3D WhatsApp & Call Now -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="prism-btn-whatsapp text-white px-2.5 sm:px-4 py-2 rounded-xl font-bold text-xs flex items-center gap-1.5 cursor-pointer shadow-sm">
+            <svg class="w-4 h-4 fill-current text-white shrink-0" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+            <span class="hidden sm:inline">WhatsApp</span>
+          </a>
+          <a href="tel:+918600572488" class="prism-btn-call text-white px-2.5 sm:px-4 py-2 rounded-xl font-bold text-xs flex items-center gap-1.5 cursor-pointer shadow-sm">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <span class="hidden sm:inline">Call Now</span>
+            <span class="sm:hidden text-[11px] font-bold">Call</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/80 px-4 py-3 space-y-1.5 text-slate-800 shadow-xl">
+      <a href="index.html" class="block px-3 py-2 rounded-xl hover:bg-slate-100 text-slate-800 font-semibold text-sm">Home</a>
+      <a href="about-us.html" class="block px-3 py-2 rounded-xl hover:bg-slate-100 text-slate-800 font-semibold text-sm">About Us</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-xl bg-blue-50 text-blue-600 font-extrabold text-sm border border-blue-200/60">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== TOP HERO BANNER ==================== -->
+  <section class="bg-[#0b1320] text-white py-7 sm:py-9 border-b border-slate-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Location Badge Pill -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#132238] border border-[#1e3a5f] text-sky-400 text-xs font-bold tracking-wider uppercase mb-3 shadow-xs">
+        <svg class="w-3.5 h-3.5 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <span>NARA ROAD, JARIPATKA • NAGPUR</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight max-w-3xl font-display">
+        Contact <span class="text-sky-400">Vanishka</span> <span class="text-emerald-400">Enterprises</span> Nagpur
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-2 text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed font-normal">
+        Visit our service center at Nara Road, Jaripatka in Nagpur, speak directly with Chief Engineer Prabhu, or request a 30-minute doorstep technician dispatch anywhere in Nagpur across 100+ specialized computer &amp; IT services.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <a href="tel:+918600572488" class="inline-flex items-center justify-center gap-2.5 px-4.5 py-2.5 rounded-xl bg-[#1d65ff] hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm transition shadow-lg shadow-blue-600/30 hover:scale-105 active:scale-95 text-center">
+          <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          <span>Direct Call: +91 8600572488</span>
+        </a>
+        <a href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="inline-flex items-center justify-center gap-2.5 px-4.5 py-2.5 rounded-xl bg-[#00a884] hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm transition shadow-lg shadow-emerald-600/30 hover:scale-105 active:scale-95 text-center">
+          <svg class="w-4 h-4 fill-current text-white shrink-0" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full space-y-8">
+
+  <!-- ===== TOP SECTION: FORM + LOCATION PANEL ===== -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+  <!-- LEFT: Send Us a Direct Message Form -->
+  <div class="lg:col-span-2 bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs space-y-5">
+    <div class="border-b border-slate-100 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div>
+        <h2 class="text-lg sm:text-xl font-black text-slate-900">Send Us a Direct Message</h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">Fill out the form below for repair inquiries, spare parts quotes, or corporate AMC requests.</p>
+      </div>
+      <span class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 w-fit">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" stroke="currentColor" stroke-width="2"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" stroke="currentColor" stroke-width="2"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" stroke="currentColor" stroke-width="2"/></svg>
+        <span>100+ Services Supported</span>
+      </span>
+    </div>
+
+    <form class="space-y-4 text-xs" id="contactInquiryForm">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">Full Name *</label>
+          <input class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium" id="contactName" placeholder="e.g. Anand Kulkarni" required type="text"/>
+        </div>
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">Mobile Number *</label>
+          <input class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium" id="contactPhone" placeholder="+91 98222 XXXXX" required type="tel"/>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-slate-700 font-bold mb-1">Locality in Nagpur *</label>
+          <input class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium" placeholder="e.g. Jaripatka, Dharampeth, IT Park, Besa" required type="text"/>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-slate-700 font-bold" for="service-select">Service Needed *</label>
+            <span class="text-[10px] text-blue-600 font-semibold">100+ Services</span>
+          </div>
+          <select aria-label="Service Needed" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium" id="contactCategory" required>
+            <optgroup label="1. Laptop &amp; Desktop Hardware Repairs">
+              <option selected value="Laptop / Desktop Doorstep General Diagnostics &amp; Inspection">Laptop / Desktop Doorstep General Diagnostics &amp; Inspection</option>
+              <option value="Laptop Motherboard Chip-Level Repair &amp; Micro-Soldering">Laptop Motherboard Chip-Level Repair &amp; Micro-Soldering</option>
+              <option value="Laptop Screen Replacement (HD / Full HD / 2K / 4K / OLED)">Laptop Screen Replacement (HD / Full HD / 2K / 4K / OLED)</option>
+              <option value="Laptop Keyboard Replacement (Standard / Backlit / Mechanical)">Laptop Keyboard Replacement (Standard / Backlit / Mechanical)</option>
+              <option value="Laptop Battery Replacement (100% Genuine OEM with Warranty)">Laptop Battery Replacement (100% Genuine OEM with Warranty)</option>
+              <option value="Laptop Charging Port / DC Power Jack Loose Connection Fix">Laptop Charging Port / DC Power Jack Loose Connection Fix</option>
+              <option value="Laptop Body Damage &amp; Broken Hinge Fabrication / Repair">Laptop Body Damage &amp; Broken Hinge Fabrication / Repair</option>
+              <option value="Laptop Deep Thermal Paste Cleaning &amp; Fan Servicing">Laptop Deep Thermal Paste Cleaning &amp; Fan Servicing</option>
+              <option value="Laptop Touchpad &amp; Trackpad Precision Repair">Laptop Touchpad &amp; Trackpad Precision Repair</option>
+              <option value="Desktop SMPS Power Supply Replacement &amp; Wattage Upgrade">Desktop SMPS Power Supply Replacement &amp; Wattage Upgrade</option>
+              <option value="Desktop CPU Cooler Installation">Desktop CPU Cooler Installation</option>
+            </optgroup>
+            <optgroup label="2. Speed Boost, RAM &amp; Storage Upgrades">
+              <option value="NVMe M.2 High-Speed SSD Upgrade (256GB / 512GB / 1TB / 2TB)">NVMe M.2 High-Speed SSD Upgrade (256GB / 512GB / 1TB / 2TB)</option>
+              <option value="2.5-Inch SATA SSD Upgrade with Zero-Data-Loss Cloning">2.5-Inch SATA SSD Upgrade with Zero-Data-Loss Cloning</option>
+              <option value="DDR4 Laptop / Desktop RAM Upgrade">DDR4 Laptop / Desktop RAM Upgrade</option>
+              <option value="DDR5 Ultra-Fast RAM Upgrade">DDR5 Ultra-Fast RAM Upgrade</option>
+              <option value="Old Slow Laptop 10x Performance Boost Tune-Up Package">Old Slow Laptop 10x Performance Boost Tune-Up Package</option>
+            </optgroup>
+            <optgroup label="3. Data Recovery &amp; Hard Disk">
+              <option value="Dead / Clicking External Hard Drive Recovery">Dead / Clicking External Hard Drive Recovery</option>
+              <option value="Accidentally Formatted Drive &amp; Deleted Files Recovery">Accidentally Formatted Drive &amp; Deleted Files Recovery</option>
+              <option value="Tally &amp; Busy Accounting Company Data File Recovery">Tally &amp; Busy Accounting Company Data File Recovery</option>
+            </optgroup>
+            <optgroup label="4. Windows, Operating Systems &amp; Drivers">
+              <option value="Clean Windows 11 Genuine Installation &amp; Official Drivers">Clean Windows 11 Genuine Installation &amp; Official Drivers</option>
+              <option value="Windows Blue Screen of Death (BSOD) Error Resolution">Windows Blue Screen of Death (BSOD) Error Resolution</option>
+              <option value="Microsoft Office 2021 / Microsoft 365 Configuration">Microsoft Office 2021 / Microsoft 365 Configuration</option>
+            </optgroup>
+            <optgroup label="5. Networking &amp; Wi-Fi">
+              <option value="Wi-Fi Dead Zone Coverage &amp; Mesh Router Installation">Wi-Fi Dead Zone Coverage &amp; Mesh Router Installation</option>
+              <option value="Office Structured LAN Cabling &amp; RJ45 Crimping">Office Structured LAN Cabling &amp; RJ45 Crimping</option>
+            </optgroup>
+            <optgroup label="6. Printers &amp; Peripherals">
+              <option value="HP, Canon &amp; Epson Printer Driver Setup">HP, Canon &amp; Epson Printer Driver Setup</option>
+              <option value="Wi-Fi Wireless Printer Setup">Wi-Fi Wireless Printer Setup</option>
+            </optgroup>
+            <optgroup label="7. Corporate IT AMC">
+              <option value="Corporate IT Annual Maintenance Contract (AMC)">Corporate IT Annual Maintenance Contract (AMC)</option>
+              <option value="School &amp; College Computer Lab Maintenance AMC">School &amp; College Computer Lab Maintenance AMC</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 flex items-center gap-2">
+        <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/></svg>
+        <input class="w-full bg-transparent border-none text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none font-medium" placeholder="Quick filter 100+ services (e.g. SSD, Screen, Tally, MacBook, Hinge, Virus)..." type="text" id="serviceFilter"/>
+      </div>
+
+      <div>
+        <label class="block text-slate-700 font-bold mb-1">Message / Laptop Problem *</label>
+        <textarea class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium" id="contactMessage" placeholder="Describe your laptop model, issue, or hardware requirement..." required rows="4"></textarea>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+        <button class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs px-8 py-3 rounded-xl transition shadow-xs flex items-center justify-center gap-2 cursor-pointer" type="submit">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" stroke="currentColor" stroke-width="2"/><path d="m21.854 2.147-10.94 10.939" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Send Message to Engineer</span>
+        </button>
+        <span class="text-[11px] text-slate-500 flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2"/></svg>
+          100% confidential • No spam calls
+        </span>
+      </div>
+    </form>
+  </div>
+
+  <!-- RIGHT: Central Lab Location Dark Panel -->
+  <div class="space-y-6">
+    <div class="bg-slate-900 text-white border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-md space-y-5">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <h3 class="text-base font-black text-white flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"><path d="M10 12h4" stroke="currentColor" stroke-width="2"/><path d="M10 8h4" stroke="currentColor" stroke-width="2"/><path d="M14 21v-3a2 2 0 0 0-4 0v3" stroke="currentColor" stroke-width="2"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Office Location</span>
+        </h3>
+        <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-emerald-500/40">Open Today</span>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div class="flex items-start gap-3">
+          <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          <div>
+            <span class="font-bold text-white block">Address:</span>
+            <p class="text-slate-300 leading-relaxed mt-0.5">Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, Nagpur, Maharashtra</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg class="w-4 h-4 text-purple-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+          <div>
+            <span class="font-bold text-white block">Operating Hours:</span>
+            <p class="text-slate-300">Monday to Sunday: 10:00 AM – 8:30 PM</p>
+            <p class="text-emerald-400 text-[11px] font-semibold mt-0.5">Open All 7 Days a Week</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 border-t border-slate-800 pt-3">
+          <svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="flex-1">
+            <span class="font-bold text-white block">Helpdesk &amp; Direct Call:</span>
+            <a class="text-blue-400 font-extrabold text-sm hover:underline block mt-0.5" href="tel:+918600572488">+91 8600572488</a>
+            <a class="text-cyan-400 font-bold text-sm hover:underline block" href="tel:+917875165423">+91 7875165423</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-2 pt-2">
+        <a class="bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs py-3 px-4 rounded-xl transition flex items-center justify-center gap-2 w-full shadow-xs" href="https://maps.google.com/?q=Plot+No+90+Aradhana+Colony+Nara+Road+Jaripatka+Nagpur" rel="noopener noreferrer" target="_blank">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Open Driving Directions in Google Maps</span>
+        </a>
+        <a class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 w-full" href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire." target="_blank">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+          <span>Request Doorstep Technician Instead</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GOOGLE MAPS SECTION ===== -->
+<section class="space-y-4" id="map">
+  <div class="space-y-1">
+    <h2 class="text-lg sm:text-xl font-black text-slate-900">Find Us on Google Maps</h2>
+    <p class="text-slate-600 text-sm">Located at Jaripatka, Nagpur — Plot No. 90, Aradhana Colony, Nara Road.</p>
+  </div>
+
+  <div class="bg-white rounded-3xl border border-slate-200 p-4 sm:p-6 shadow-md space-y-4">
+    <!-- Map Header -->
+    <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-100/80 p-3 rounded-2xl border border-slate-200">
+      <div class="flex items-center gap-2 text-xs font-semibold text-slate-800">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
+        <span>Live Location: <strong class="text-blue-700">Vanishka Enterprises — Jaripatka, Nagpur</strong></span>
+      </div>
+      <a href="https://maps.google.com/?q=Plot+No+90+Aradhana+Colony+Nara+Road+Jaripatka+Nagpur" target="_blank" class="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"><path d="M15 3h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 14 21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2"/></svg>
+        Open in Google Maps
+      </a>
+    </div>
+
+    <!-- Map Iframe — Nagpur, Jaripatka area -->
+    <div class="relative w-full h-[380px] sm:h-[460px] rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
+      <iframe
+        class="w-full h-full border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.234567890123!2d79.08!3d21.13!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c7e8d1a2b3c4%3A0x1234567890abcdef!2sJaripatka%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+        title="Vanishka Enterprises Location — Jaripatka, Nagpur">
+      </iframe>
+      <!-- Map Overlay Card -->
+      <div class="absolute top-3 left-3 bg-white/95 text-slate-900 p-3.5 rounded-2xl border border-slate-200 shadow-xl backdrop-blur-md text-xs max-w-[220px] space-y-1.5 hidden sm:block">
+        <div class="flex items-center gap-1.5 font-extrabold text-blue-700">
+          <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24"><path d="M10 12h4" stroke="currentColor" stroke-width="2"/><path d="M14 21v-3a2 2 0 0 0-4 0v3" stroke="currentColor" stroke-width="2"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Vanishka Enterprises</span>
+        </div>
+        <p class="text-slate-600 text-[11px] leading-tight font-medium">Plot No. 90, Aradhana Colony,<br/>Nara Road, Jaripatka, Nagpur</p>
+        <div class="pt-1 text-[10px] text-emerald-700 font-bold flex items-center gap-1.5 border-t border-slate-100">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Open Daily: 10:00 AM – 8:30 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Address + Directions Row -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-blue-50/80 p-3.5 rounded-2xl border border-blue-200">
+      <div class="text-xs text-blue-900 flex items-center gap-2">
+        <svg class="w-4 h-4 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, <strong>Nagpur</strong></span>
+      </div>
+      <div class="flex gap-2 w-full sm:w-auto">
+        <a class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm" href="https://maps.google.com/?q=Plot+No+90+Aradhana+Colony+Nara+Road+Jaripatka+Nagpur" rel="noopener noreferrer" target="_blank">Get Directions</a>
+        <a class="flex-1 sm:flex-none bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2" href="tel:+918600572488">Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==========================================
+       FOOTER (Synchronized Across All Pages)
+       ========================================== -->
+<footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+<div class="lg:col-span-1">
+<a class="flex items-center gap-3 mb-4 group" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-sm">
+<img alt="Vanishka Enterprises Logo" class="w-full h-full object-contain" src="images/ve_icon_transparent.png"/>
+</div>
+<span class="font-display font-black text-lg text-electric tracking-tight">VANISHKA ENTERPRISES</span>
+</a>
+<p class="text-xs text-slate-400 leading-relaxed font-normal">
+            Authorized enterprise partner providing certified refurbished laptops, Canon printers, AI smart boards, Microtek UPS, and IT hardware.
+          </p>
+</div>
+<div>
+<h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
+<ul class="space-y-2.5 text-xs">
+<li><a class="hover:text-cyan-400 transition" href="index.html">Home</a></li>
+<li><a class="hover:text-cyan-400 transition" href="about-us.html">About Us</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Products &amp; Laptops</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Interactive Smart Boards</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CUSTOMER SERVICE</h4>
+<ul class="space-y-2.5 text-xs">
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Track Order</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Shipping &amp; Delivery</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">1-Year Warranty</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Returns &amp; Refunds</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
+<ul class="space-y-2.5 text-xs">
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Refurbished Dell &amp; HP Laptops</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Canon Ink-Tank Printers</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">4K Smart Digital Boards</a></li>
+<li><a class="hover:text-cyan-400 transition" href="contact.html">Microtek Heavy Duty UPS</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CONTACT US</h4>
+<ul class="space-y-2.5 text-xs">
+<li class="flex items-start gap-2">
+<svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" fill="none" viewbox="0 0 24 24"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"></path></svg>
+<span>Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, Nagpur</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"></path></svg>
+<span class="font-bold text-white">(+91) 8600572488 / 7875165423</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+<p>© 2026 <span class="text-slate-300 font-bold">Vanishka Enterprises</span>. All Rights Reserved.</p>
+<div class="flex items-center gap-4">
+<a class="hover:text-slate-300 transition" href="contact.html">Privacy Policy</a>
+<span>|</span>
+<a class="hover:text-slate-300 transition" href="contact.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a aria-label="Chat on WhatsApp" class="fixed right-5 bottom-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300" href="https://wa.me/918600572488?text=Hello%20Vanishka%20Enterprises%2C%20I%20want%20to%20inquire%20about%20your%20products." target="_blank">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.4-2 1.5-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.6.3.1.2.1.9-.1 1.5z"></path></svg>
+</a>
+<script>
+    // Handle Inquiry Form Submission -> Construct WhatsApp message URL
+    document.getElementById('contactInquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('contactName').value.trim();
+      var phone = document.getElementById('contactPhone').value.trim();
+      var category = document.getElementById('contactCategory').value;
+      var message = document.getElementById('contactMessage').value.trim();
+
+      var text = "Hello Vanishka Enterprises,
+
+" +
+                 "I would like to request an IT service:
+" +
+                 "👤 *Name:* " + name + "
+" +
+                 "📞 *Phone/WhatsApp:* " + phone + "
+" +
+                 "🛠️ *Service Needed:* " + category + "
+" +
+                 "📝 *Description:* " + message;
+
+      var encodedText = encodeURIComponent(text);
+      var whatsappUrl = "https://wa.me/918600572488?text=" + encodedText;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
