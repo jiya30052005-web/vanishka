@@ -408,77 +408,167 @@
   </main>
 
   <!-- ==========================================
-       FOOTER (Synchronized Across All Pages)
+       NEW LIGHT MODERN FOOTER (Exact Match with Image)
        ========================================== -->
-  <footer class="bg-navy-950 text-slate-300 pt-14 pb-8 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+  <footer class="relative bg-[#f8fbff] text-slate-700 pt-16 pb-8 border-t border-blue-100/80 overflow-hidden">
 
-        <div class="lg:col-span-1">
+    <!-- Top-Right Decorative Fluid Gradient Wave (from image) -->
+    <div class="absolute top-0 right-0 w-80 sm:w-96 md:w-[480px] h-64 sm:h-72 md:h-80 pointer-events-none select-none z-0">
+      <svg viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover object-top-right opacity-90">
+        <defs>
+          <linearGradient id="waveTopGradAbout" x1="500" y1="0" x2="200" y2="280" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3b82f6" stop-opacity="0.75" />
+            <stop offset="0.5" stop-color="#60a5fa" stop-opacity="0.45" />
+            <stop offset="1" stop-color="#93c5fd" stop-opacity="0.1" />
+          </linearGradient>
+        </defs>
+        <path d="M120 0 C220 80, 260 40, 360 140 C420 200, 470 190, 500 240 L500 0 Z" fill="url(#waveTopGradAbout)" />
+        <path d="M220 0 C300 70, 340 30, 420 100 C470 140, 490 120, 500 160 L500 0 Z" fill="#2563eb" fill-opacity="0.25" />
+      </svg>
+    </div>
+
+    <!-- Bottom-Left Decorative Fluid Gradient Wave (from image) -->
+    <div class="absolute bottom-0 left-0 w-80 sm:w-96 md:w-[480px] h-64 sm:h-72 md:h-80 pointer-events-none select-none z-0">
+      <svg viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover object-bottom-left opacity-90">
+        <defs>
+          <linearGradient id="waveBottomGradAbout" x1="0" y1="320" x2="350" y2="100" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#2563eb" stop-opacity="0.75" />
+            <stop offset="0.5" stop-color="#3b82f6" stop-opacity="0.45" />
+            <stop offset="1" stop-color="#93c5fd" stop-opacity="0.1" />
+          </linearGradient>
+        </defs>
+        <path d="M0 80 C80 140, 140 120, 220 220 C270 280, 340 260, 420 320 L0 320 Z" fill="url(#waveBottomGradAbout)" />
+        <path d="M0 160 C60 190, 110 180, 180 250 C220 290, 270 280, 320 320 L0 320 Z" fill="#1d4ed8" fill-opacity="0.2" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-7 pb-12">
+
+        <!-- Col 1: Brand & Socials -->
+        <div class="sm:col-span-2 lg:col-span-1 pr-0 lg:pr-2">
           <a href="index.html" class="flex items-center gap-3 mb-4 group">
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border border-slate-700/80 flex items-center justify-center p-1.5 shadow-sm">
-              <img src="images/ve_icon_transparent.png" alt="Vanishka Enterprises Logo" class="w-full h-full object-contain" />
+            <img src="images/ve_badge_icon.png" alt="Vanishka Enterprises" class="h-12 w-12 object-contain rounded-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform" style="width: 48px; height: 48px; min-width: 48px; max-width: 48px;" />
+            <div class="flex flex-col justify-center leading-none">
+              <span class="font-display font-black text-xl text-[#1d65ff] tracking-tight">VANISHKA</span>
+              <span class="font-display font-black text-xl text-[#1d65ff] tracking-tight mt-0.5">ENTERPRISES</span>
             </div>
-            <span class="font-display font-black text-lg text-electric tracking-tight">VANISHKA ENTERPRISES</span>
           </a>
-          <p class="text-xs text-slate-400 leading-relaxed font-normal">
+
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-sm mb-6">
             Authorized enterprise partner providing certified refurbished laptops, Canon printers, AI smart boards, Microtek UPS, and IT hardware.
           </p>
+
+          <!-- Social Icon Pills (Exact Match: FB, Insta, LinkedIn, YouTube, X) -->
+          <div class="flex items-center gap-2.5">
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-[#e0effe] hover:bg-[#1d65ff] text-[#1d65ff] hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-[#e0effe] hover:bg-[#1d65ff] text-[#1d65ff] hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-[#e0effe] hover:bg-[#1d65ff] text-[#1d65ff] hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-[#e0effe] hover:bg-[#1d65ff] text-[#1d65ff] hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="#" aria-label="X" class="w-9 h-9 rounded-full bg-[#e0effe] hover:bg-[#1d65ff] text-[#1d65ff] hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
         </div>
 
+        <!-- Col 2: Quick Links -->
         <div>
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">QUICK LINKS</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
-            <li><a href="about-us.html" class="hover:text-cyan-400 transition">About Us</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Products &amp; Laptops</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Interactive Smart Boards</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a></li>
+          <h4 class="font-display font-black text-base lg:text-lg text-[#0f172a] mb-2">Quick Links</h4>
+          <div class="w-8 h-1 bg-[#1d65ff] rounded-full mb-4"></div>
+          <ul class="space-y-2.5 text-xs sm:text-sm font-medium">
+            <li><a href="index.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Home</span></a></li>
+            <li><a href="about-us.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>About Us</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Products &amp; Laptops</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Interactive Smart Boards</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Contact Us</span></a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Customer Service -->
         <div>
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CUSTOMER SERVICE</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Track Order</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Shipping &amp; Delivery</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">1-Year Warranty</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Returns &amp; Refunds</a></li>
+          <h4 class="font-display font-black text-base lg:text-lg text-[#0f172a] mb-2">Customer Service</h4>
+          <div class="w-8 h-1 bg-[#1d65ff] rounded-full mb-4"></div>
+          <ul class="space-y-2.5 text-xs sm:text-sm font-medium">
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Track Order</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Shipping &amp; Delivery</span></a></li>
+            <li><a href="about-us.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>1-Year Warranty</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Returns &amp; Refunds</span></a></li>
           </ul>
         </div>
 
+        <!-- Col 4: Product Lineup -->
         <div>
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">PRODUCT LINEUP</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Refurbished Dell &amp; HP Laptops</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Canon Ink-Tank Printers</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">4K Smart Digital Boards</a></li>
-            <li><a href="contact.html" class="hover:text-cyan-400 transition">Microtek Heavy Duty UPS</a></li>
+          <h4 class="font-display font-black text-base lg:text-lg text-[#0f172a] mb-2">Product Lineup</h4>
+          <div class="w-8 h-1 bg-[#1d65ff] rounded-full mb-4"></div>
+          <ul class="space-y-2.5 text-xs sm:text-sm font-medium">
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Refurbished Dell &amp; HP Laptops</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Canon Ink-Tank Printers</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>4K Smart Digital Boards</span></a></li>
+            <li><a href="contact.html" class="text-slate-700 hover:text-[#1d65ff] transition flex items-center gap-2"><span class="text-[#1d65ff] font-bold">&gt;</span> <span>Microtek Heavy Duty UPS</span></a></li>
           </ul>
         </div>
 
+        <!-- Col 5: Contact Us -->
         <div>
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider mb-4">CONTACT US</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 16.5 20 12.3 20 9a8 8 0 10-16 0c0 3.3 2.7 7.5 8 12.7z" stroke="currentColor" stroke-width="2"/></svg>
-              <span>Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, Nagpur</span>
+          <h4 class="font-display font-black text-base lg:text-lg text-[#0f172a] mb-2">Contact Us</h4>
+          <div class="w-8 h-1 bg-[#1d65ff] rounded-full mb-4"></div>
+          <ul class="space-y-3.5 text-xs sm:text-sm">
+            <li class="flex items-start gap-2.5">
+              <svg class="w-5 h-5 text-[#1d65ff] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate-700 leading-snug">Plot No. 90, Aradhana Colony, Nara Road, Jaripatka, Nagpur</span>
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
-              <span class="font-bold text-white">(+91) 8600572488 / 7875165423</span>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-5 h-5 text-[#1d65ff] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+              </svg>
+              <a href="tel:+918600572488" class="font-extrabold text-[#0f172a] hover:text-[#1d65ff] transition whitespace-nowrap">
+                (+91) 8600572488 / 7875165423
+              </a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-5 h-5 text-[#1d65ff] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+              </svg>
+              <a href="mailto:info@vanishkaenterprises.in" class="text-slate-700 hover:text-[#1d65ff] transition break-all">
+                info@vanishkaenterprises.in
+              </a>
             </li>
           </ul>
+
+          <!-- Get In Touch Button (Exact Pill Button from image) -->
+          <div class="mt-4">
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#1d65ff] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm transition-all shadow-md shadow-blue-500/25 hover:scale-105 active:scale-95 cursor-pointer">
+              <span>Get In Touch</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
       </div>
 
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
-        <p>© 2026 <span class="text-slate-300 font-bold">Vanishka Enterprises</span>. All Rights Reserved.</p>
-        <div class="flex items-center gap-4">
-          <a href="contact.html" class="hover:text-slate-300 transition">Privacy Policy</a>
-          <span>|</span>
-          <a href="contact.html" class="hover:text-slate-300 transition">Terms &amp; Conditions</a>
+      <!-- Bottom Copyright & Policy Bar -->
+      <div class="pt-6 border-t border-slate-200/90 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-slate-600 gap-3">
+        <p>© 2026 <strong class="text-[#1d65ff] font-bold">Vanishka Enterprises</strong>. All Rights Reserved.</p>
+        <div class="flex items-center gap-4 text-slate-600">
+          <a href="contact.html" class="hover:text-[#1d65ff] transition">Privacy Policy</a>
+          <span class="text-slate-300">|</span>
+          <a href="contact.html" class="hover:text-[#1d65ff] transition">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
